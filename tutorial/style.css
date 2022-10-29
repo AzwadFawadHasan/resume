@@ -1,0 +1,10 @@
+h1 h2{
+    color:purple;
+}
+
+// this will not work because 
+here it's looking for a h2 tag inside a h1 tag
+
+
+precedence of tags in css
+elementSelector(like p tag, body tag etc)<.class<#id

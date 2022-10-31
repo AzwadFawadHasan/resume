@@ -1,22 +1,51 @@
+html, body{
+    margin:0;
+    background-color: antiquewhite;
+    border-radius: 2px solid black;
+    box-sizing: border-box;
+    justify-content: center;
+    padding:10px;
+    height: 100%;
+}
 .container {
     border: 5px solid purple;
     
+    
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items:flex-end;
+    
 }
-body{
-    background-color: antiquewhite;
+
+/*growing and shrinking all the containers */
+/*
+.container>div {
+    flex:1;
 }
+.container > #profile{
+    flex:2;
+}
+
+*/
+
 #home {
     background-color: red;
-    margin-right: auto;
+    
+    
+    
 }
 #search {
     background-color: green;
+    
 }
 #logout {
     background-color:blue;
+    
+}
+#profile{
+    
 }
 /*flexbox is a block element
 Main axis goes from left to right 

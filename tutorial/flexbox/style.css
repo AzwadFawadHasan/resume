@@ -1,0 +1,41 @@
+.container {
+    border: 5px solid purple;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+body{
+    background-color: antiquewhite;
+}
+#home {
+    background-color: red;
+}
+#search {
+    background-color: green;
+}
+#logout {
+    background-color:blue;
+}
+/*flexbox is a block element
+Main axis goes from left to right 
+Cross axis goes from top to bottom
+We can change this main and cross directions 
+Using flex-direcrtion
+
+default flex-direction is row
+
+*/
+
+/*
+by default
+justify-content=flex-start ;
+meaning contents go left to right;
+justify-content = flex end 
+means content goes from right to left
+justify-content= center 
+means contents are at the center
+justify-content has space-around propertly as well
+it also has space between and space-evenly
+
+*/

@@ -3,13 +3,14 @@
     
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 body{
     background-color: antiquewhite;
 }
 #home {
     background-color: red;
+    margin-right: auto;
 }
 #search {
     background-color: green;

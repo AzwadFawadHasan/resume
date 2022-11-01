@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.hero_section {
+    background: #002ed0;
+    padding:0 60px;/*padding in top right bottom left*/
+    color:#fff;
+}
+
+.hero_wrapper {
+    display:grid;
+    grid-template-columns: 1fr 1fr;/*The grid-template-columns property specifies the number (and the widths) of columns in a grid layout. The values are a space separated list, where each value specifies the size of the respective column.*/
+    grid-template-rows: 820px;/*size of rows*/
+}
+
+.column_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;/*spaces them evenly based off of the size of the column*/
+}
+
+.column_left h1 {
+    font-size: 90px;
+}
+
+.column_left p {
+    font-size: 16px;
+    line-height: 2.3;
+}
+
+.column_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.column_right img {
+    width: 100%;
+    height: 100%;
+}

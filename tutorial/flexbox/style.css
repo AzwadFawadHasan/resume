@@ -18,7 +18,9 @@ html, body{
     align-items:flex-end;
     
 }
-
+/*flex-basis determines the base width */
+/*flex-grow decides how much of the extra space should be distributed among the items*/
+/*flex-shrink decides to shirnk items after base width is crossed*/
 /*growing and shrinking all the containers */
 /*
 .container>div {

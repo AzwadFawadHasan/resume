@@ -236,3 +236,57 @@
     font-weight: 700;
     text-transform: uppercase;
 }
+
+/*Services media queires*/
+
+@media screen and (max-width:768px) {
+    .services__grid{
+        grid-template-columns: 1fr;
+
+    }
+    .macbook{
+        display: none;
+    }
+    .yellow__bar{
+        width:100%;
+        justify-content: flex-start;;
+    }
+    
+}
+
+@media screen and (max-width:468px) {
+    .services__container{
+        padding-top: 100px;
+        padding-top: 200px;
+        padding-left: 16px;
+
+    }
+    .services__grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 900px;
+
+    }
+
+    .services__container h1 {
+        text-align: center;
+        margin-bottom: 160px;
+
+    }
+
+    .services__left{
+        padding:0 24px;
+
+    }
+    .services__content{
+        margin-top: 40px;
+    }
+    .services__content img {
+        margin-right:16px;
+    }
+    .yellow__bar img {
+        margin: 0 20px;
+    }
+    .yellow__bar p {
+        margin-right:20px;
+    }
+}

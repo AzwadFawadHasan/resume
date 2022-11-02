@@ -514,3 +514,23 @@
     text-transform: uppercase;
     font-weight: 700;
 }
+
+@media screen and (max-width: 1000px){
+    .footer__container{
+        padding:60px 24px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer__right{
+        flex-direction: column;
+
+    }
+}
+
+@media screen and (max-width: 468px){
+   
+    .footer__right{
+        padding: 0 16px;
+        
+    }
+}

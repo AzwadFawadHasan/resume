@@ -444,3 +444,73 @@
     font-size: 40px;
     color:#fff;
 }
+
+/*Contact Media Queries*/
+@media screen and (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact__bar{
+        width: 100%;
+        justify-content: center;
+        
+    }
+
+    .contact__bar img {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .contact__bar p {
+        margin-right: 16px;
+    }
+    .contact__bar span {
+          font-size: 16px;  
+    }
+    .contact h1 {
+        margin-left:0;
+        margin-top:32px;
+        font-size:32px;
+
+    }
+}
+
+/*Footer*/
+.footer{
+    background: #002ed0;
+    color:#fff;
+
+}
+
+.footer__container{
+    padding:60px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.footer__left {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__left h2 {
+    margin-bottom: 24px;
+
+}
+
+.footer__left p {
+    line-height: 2;
+}
+
+.footer__right {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.footer__right a {
+    color:#fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}

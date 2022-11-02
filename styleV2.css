@@ -362,4 +362,46 @@
     padding: 0 8px;
     width: 100%;
     height: 100%;
+
 }
+
+/*Portfolio Media Queries*/
+
+@media screen and (max-width: 1368px) {
+    .portfolio__projects{
+        flex-direction: column;
+
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .portfolio{
+        padding:30px;
+
+    }
+    .portfolio__container h1 {
+        font-size: 70px;
+
+    }
+    .portfolio__main{
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio__container{
+        padding-left: 0px;
+    }
+    .portfolio__right{
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 468px){
+    .portfolio{
+        padding: 10px;
+    }
+    .portfolio__container h1 {
+        font-size: 40px;
+    }
+}
+
+/*Contact CSS*/

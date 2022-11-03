@@ -6,6 +6,6 @@ This rep contains my CSE309MidtermProject
 Create a portfolio website consisting of your personal details,
  educational details, 
  job experience, 
- research work,
+ research work,X
  academic projects, 
  extra curricular activities etc. Basically create an online presence of your CV/Resume. Website should be developed using HTML/CSS and Flexbox. Following are few sample sites to take inspiration from. 

@@ -484,20 +484,20 @@
 
 /*Portfilio CSS*/
 
-.portfolio {
+.projects {
     background: #002ed0;
     color:#fff;
 
 }
 
-.portfolio__container{
+.projects__container{
     padding-top: 100px;
     padding-bottom:100px;
     padding-left: 60px;
 
 }
 
-.portfolio__container h1 {
+.projects__container h1 {
     font-size: 110px;
     color:#fff;
     -webkit-text-fill-color: transparent;
@@ -508,39 +508,39 @@
 
 }
 
-.portfolio__main {
+.projects__main {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.portfolio__img {
+.projects__img {
     height: 100%;
     width:100%;
 
 }
 
-.portfolio__right {
+.projects__right {
     padding: 150px 100px 0 20px;
 
 }
 
-.portfolio__right h2 {
+.projects__right h2 {
     margin-bottom: 40px;
     font-size: 30px;
 }
 
-.portfolio__right p {
+.projects__right p {
     margin-bottom: 50px;
     line-height: 2.5;
 }
 
-.portfolio__right a {
+.projects__right a {
     color:#fff;
     text-decoration: none;
 
 }
 
-.portfolio__projects {
+.projects__projects {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -549,7 +549,7 @@
 
 }
 
-.portfolio__projects img{
+.projects__projects img{
     padding: 0 8px;
     width: 100%;
     height: 100%;
@@ -559,38 +559,38 @@
 /*Portfolio Media Queries*/
 
 @media screen and (max-width: 1368px) {
-    .portfolio__projects{
+    .projects__projects{
         flex-direction: column;
 
     }
 }
 
 @media screen and (max-width: 1000px) {
-    .portfolio{
+    .projects{
         padding:30px;
 
     }
-    .portfolio__container h1 {
+    .projects__container h1 {
         font-size: 70px;
 
     }
-    .portfolio__main{
+    .projects__main{
         grid-template-columns: 1fr;
     }
 
-    .portfolio__container{
+    .projects__container{
         padding-left: 0px;
     }
-    .portfolio__right{
+    .projects__right{
         margin-bottom: 60px;
     }
 }
 
 @media screen and (max-width: 468px){
-    .portfolio{
+    .projects{
         padding: 10px;
     }
-    .portfolio__container h1 {
+    .projects__container h1 {
         font-size: 40px;
     }
 }
@@ -666,9 +666,84 @@
     }
 }
 
+
+/*Resume CSS*/
+
+.resume {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    background: #002ed0;
+    padding: 100px 0;
+
+}
+
+.resume__bar {
+    background: yellow;
+    height:80px;
+    width:68%;
+    color:#000;
+    display: flex;
+    justify-content:right;
+    align-items: center;
+}
+
+.resume__bar img {
+    margin-right: 40px;
+
+}
+
+.resume__bar p {
+    margin-right: 40px;
+    font-weight: 700;
+}
+
+.resume__bar span {
+    margin-right: 40px;
+
+}
+
+.resume h1 {
+    margin-right: 250px;
+    font-size: 40px;
+    color:#fff;
+}
+
+/*Contact Media Queries*/
+@media screen and (max-width: 768px) {
+    .resume {
+        flex-direction: column;
+    }
+
+    .resume__bar{
+        width: 100%;
+        justify-content: center;
+        
+    }
+
+    .resume__bar img {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .resume__bar p {
+        margin-right: 16px;
+    }
+    .resume__bar span {
+          font-size: 16px;  
+    }
+    .resume h1 {
+        margin-left:0;
+        margin-top:32px;
+        font-size:32px;
+
+    }
+}
+
+
 /*Footer*/
 .footer{
     background: #002ed0;
+    background: #282781;
     color:#fff;
 
 }

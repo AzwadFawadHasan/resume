@@ -606,7 +606,7 @@
 
 .secondProjects__container{
     padding-top: 100px;
-    padding-bottom:100px;
+    padding-bottom:30px;
     padding-left: 60px;
 
 }
@@ -793,8 +793,9 @@
     display: flex;
     align-items: center;
     justify-content: right;
-    background: #002ed0;
-    padding: 100px 0;
+    background: black;
+   
+    
 
 }
 
@@ -806,6 +807,9 @@
     display: flex;
     justify-content:right;
     align-items: center;
+    margin-bottom: -50px;
+    
+    
 }
 
 .resume__bar img {
@@ -819,14 +823,15 @@
 }
 
 .resume__bar span {
-    margin-right: 40px;
+    margin-right: 60px;
 
 }
 
 .resume h1 {
     margin-right: 250px;
-    font-size: 40px;
+    font-size: 30px;
     color:#fff;
+    margin-bottom: -25px;
 }
 
 /*Contact Media Queries*/
@@ -858,6 +863,80 @@
 
     }
 }
+/*skill bar*/
+.skill {
+    display:flex;
+    align-items: center;
+    justify-content: right;
+    background: #002ed0;
+    padding: 0px 0  0 150px;
+    
+
+}
+
+.skill__bar {
+    background: yellow;
+    height:80px;
+    width:68%;
+    color:#000;
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: -50px;
+}
+
+.skill__bar img {
+    margin-right: 40px;
+
+}
+
+.skill__bar p {
+    margin-right: 40px;
+    font-weight: 700;
+}
+
+.skill__bar span {
+    margin-right: 40px;
+
+}
+
+.skill h1 {
+    margin-right: 250px;
+    font-size: 40px;
+    color:#fff;
+}
+
+/*Contact Media Queries*/
+@media screen and (max-width: 768px) {
+    .skill {
+        flex-direction: column;
+    }
+
+    .skill__bar{
+        width: 100%;
+        justify-content: center;
+        
+    }
+
+    .skill__bar img {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .skill__bar p {
+        margin-right: 16px;
+    }
+    .skill__bar span {
+          font-size: 16px;  
+    }
+    .skill h1 {
+        margin-left:0;
+        margin-top:32px;
+        font-size:32px;
+
+    }
+}
+
 
 
 /*Footer*/
@@ -869,7 +948,7 @@
 }
 
 .footer__container{
-    padding:60px;
+    padding:60px 0 0 0;
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
@@ -891,7 +970,7 @@
 .footer__right {
     display: flex;
     justify-content: space-between;
-    padding: 0 100px;
+    padding: 0 50px;
 }
 
 .footer__right a {
@@ -968,7 +1047,7 @@
     background: #0F0200;
     
     color:#fff;
-    position:relative;
+    position:flex;
 }
 
 .Achievements__container{

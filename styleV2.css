@@ -955,3 +955,173 @@
     border-bottom: 2px solid white;
 }
 
+/*Achievements*/
+
+
+.Achievements {
+    background: #6C8A9A;
+    background: #0F0200;
+    
+    color:#fff;
+    position:relative;
+}
+
+.Achievements__container{
+    background: #0F0200;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 60px;
+
+}
+
+.Achievements__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 700px;
+}
+
+.Achievements__container h1 {
+    font-size: 65px;
+    padding-bottom: 50px;
+
+}
+
+.Achievements__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 50px 0px 50px;
+    
+}
+
+.Achievements__right {
+    display: absolute;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 50px 0px 50px;
+}
+
+.Achievements__content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.Achievements__content img{
+    margin-right:50px;
+}
+
+.Achievements__desc h2{
+    font-size: 20px;
+    text-transform: uppercase;
+    
+}
+
+.Achievements__desc p {
+    line-height: 1.3;
+
+}
+
+.yellow__bar1{
+    position:absolute;
+    background:yellow;
+    height: 80px;
+    bottom:40px;
+    right:0;
+    width:80%;color: #000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.yellow__bar1 img{
+    margin:0 40px;
+}
+
+.yellow__bar1 p{
+    margin-right: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+.yellow__bar{
+    position:absolute;
+    background:yellow;
+    height: 80px;
+    bottom:-40px;
+    right:0;
+    width:80%;color: #000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.yellow__bar img{
+    margin:0 40px;
+}
+
+.yellow__bar p{
+    margin-left: 25px;
+    font-size: 15px;
+    margin-right: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.job1description{
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+/*Achievements media queires*/
+
+@media screen and (max-width:768px) {
+    .Achievements__grid{
+        grid-template-columns: 1fr;
+
+    }
+    .macbook{
+        display: none;
+    }
+    .yellow__bar{
+        width:100%;
+        justify-content: flex-start;;
+    }
+    
+}
+
+@media screen and (max-width:468px) {
+    .Achievements__container{
+        padding-top: 100px;
+        
+        padding-left: 16px;
+
+    }
+    .Achievements__grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 900px;
+
+    }
+
+    .Achievements__container h1 {
+        text-align: center;
+        margin-bottom: 160px;
+
+    }
+
+    .Achievements__left{
+        padding:0 24px;
+
+    }
+    .Achievements__content{
+        margin-top: 40px;
+    }
+    .Achievements__content img {
+        margin-right:16px;
+    }
+    .yellow__bar img {
+        margin: 0 20px;
+    }
+    .yellow__bar p {
+        margin-right:20px;
+    }
+}

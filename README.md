@@ -2,6 +2,9 @@
 This rep contains my CSE309MidtermProject
 # Important Read ME First
 Open the project in offine mode with VScode's Live server extension, (otherwise some pictures Might not load)
+
+https://azwadfawadhasan.github.io/CSE309MidtermProject/
+
 ### Midterm Project:
 
 Create a portfolio website consisting of your personal details,

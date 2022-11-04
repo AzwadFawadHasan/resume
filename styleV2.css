@@ -995,7 +995,7 @@
 }
 
 .Achievements__right {
-    display: absolute;
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 0 50px 0px 50px;

@@ -831,3 +831,59 @@
     height: auto; /* Maintain aspect ratio */
   }
 }
+
+.skill__bar {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.scrolling-bar {
+  display: inline-block;
+  animation: scroll-horizontal 10s linear infinite;
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Adjust the size and style of the scrollbar as per your requirements */
+.skill__bar::-webkit-scrollbar {
+  width: 8px;
+  background-color: #000;
+}
+
+.skill__bar::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 4px;
+}
+
+.skill__bar::-webkit-scrollbar-thumb:hover {
+  background-color: #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .scrolling-bar img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scrolling-bar img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .scrolling-bar img {
+    width: 10px;
+    height: 10px;
+  }
+}

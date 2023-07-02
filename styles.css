@@ -829,8 +829,33 @@
   .book2 {
     width: 50%; /* Shrink the width by 50% */
     height: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
+
+@media (max-width: 450px) {
+  .book2 {
+    width: 35%; /* Shrink the width by 50% */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 350px) {
+  .book2 {
+    width: 25%; /* Shrink the width by 50% */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 
 .skill__bar {
   overflow-x: auto;
@@ -883,7 +908,7 @@
 
 @media (max-width: 360px) {
   .scrolling-bar img {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
   }
 }

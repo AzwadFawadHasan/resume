@@ -1,0 +1,91 @@
+body {
+  margin: 2rem;
+}
+
+.coding-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.coding-card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.coding-card {
+  margin: 1rem;
+  width: 30%;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.coding-card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.coding-card-body {
+  padding: 1rem;
+}
+
+.coding-card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.coding-card-text {
+  margin-bottom: 1rem;
+}
+
+/* Hover effect */
+.coding-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Media Queries */
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {
+  .coding-card {
+    width: 45%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .coding-card {
+    width: 30%;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .coding-card {
+    width: 30%;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .coding-card {
+    width: 30%;
+  }
+}
+
+/* Custom media query */
+@media (max-width: 950px) {
+  .coding-card {
+    width: 100%;
+  }
+}
+
+.coding-card-img-top {
+  width: 100%;
+  height: auto;
+  max-width: 600px;  /* Set max width */
+  max-height: 400px; /* Set max height */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  display: block;
+  margin: 0 auto;
+}

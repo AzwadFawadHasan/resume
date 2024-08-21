@@ -1,0 +1,520 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    background-color: #ffffff;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.75rem;
+    color: #333333;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555555;
+}
+
+.nav-tabs .nav-link {
+    color: #555555;
+}
+
+
+.nav-tabs .nav-link.active {
+    color: #ffffff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.tab-content h6 {
+    font-size: 1.25rem;
+    color: #333333;
+}
+
+.tab-content p {
+    font-size: 1rem;
+    color: #555555;
+}
+
+.ai-google-scholar-square, .ai-dblp-square, .ai-researchgate-square, .fa-linkedin, .ai-cv-square {
+    font-size: 2rem; /* Adjust this value to make the icons larger */
+}
+
+.social-buttons {
+    font-size: 2rem; /* Adjust this value to make the icons larger */
+    margin: 0 8px; /* Add space between icons */
+}
+
+.ai-cv-square {
+    font-size: 2rem; /* Ensure CV icon matches the size of others */
+}
+
+
+
+@media (max-width: 1000px) {
+    .h3 {
+        font-size: 1.5rem;
+    }
+    .h5 {
+        font-size: 1.25rem;
+    }
+    .img-thumbnail {
+        width: 150px;
+        height: 150px;
+    }
+    .social-buttons {
+        font-size: 1.5rem;
+        margin: 0 5px;
+    }
+}
+
+
+.email-address {
+    display: inline-block;
+  }
+  
+  .email-address b, .email-address .secondary-email {
+    display: inline;
+  }
+  
+  .secondary-email {
+    font-size: 0.9em;
+    color: #666; /* adjust the color to your liking */
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .email-address b {
+      display: block;
+    }
+    .email-address .secondary-email {
+      display: block;
+      margin-top: 5px; /* add some space between the two email addresses */
+    }
+    .email-address b, .email-address .secondary-email {
+      font-size: 0.8em; /* reduce font size on smaller screens */
+    }
+  }
+  
+  /* Media query for even smaller screens */
+  @media (max-width: 480px) {
+    .email-address b, .email-address .secondary-email {
+      font-size: 0.7em; /* reduce font size even further on very small screens */
+    }
+  }
+
+
+#profile_picture img {
+    transition: transform 0.3s ease;
+}
+
+#profile_picture:hover img {
+    transform: scale(1.1);
+}
+
+
+/*Wobble Horizontal */
+@-webkit-keyframes hvr-wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes hvr-wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+.hvr-wobble-horizontal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-wobble-horizontal:hover, .hvr-wobble-horizontal:focus, .hvr-wobble-horizontal:active {
+  -webkit-animation-name: hvr-wobble-horizontal;
+  animation-name: hvr-wobble-horizontal;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+
+
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #2098D1;
+  background: #087cfc;
+  background: #000000;
+  background: #cee5fe;
+  background: #087cfc;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
+/* Underline From Right */
+.hvr-underline-from-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 100%;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  height: 4px;
+  -webkit-transition-property: left;
+  transition-property: left;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-right:hover:before, .hvr-underline-from-right:focus:before, .hvr-underline-from-right:active:before {
+  left: 0;
+}
+
+/* Overline From Left */
+.hvr-overline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-overline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  top: 0;
+  background: #2098D1;
+  height: 4px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-overline-from-left:hover:before, .hvr-overline-from-left:focus:before, .hvr-overline-from-left:active:before {
+  right: 0;
+}
+
+/* Overline From Center */
+.hvr-overline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-overline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  top: 0;
+  background: #2098D1;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-overline-from-center:hover:before, .hvr-overline-from-center:focus:before, .hvr-overline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
+/* Overline From Right */
+.hvr-overline-from-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-overline-from-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 100%;
+  right: 0;
+  top: 0;
+  background: #2098D1;
+  height: 4px;
+  -webkit-transition-property: left;
+  transition-property: left;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-overline-from-right:hover:before, .hvr-overline-from-right:focus:before, .hvr-overline-from-right:active:before {
+  left: 0;
+}
+
+/* Reveal */
+.hvr-reveal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-reveal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-color: #2098D1;
+  border-style: solid;
+  border-width: 0;
+  -webkit-transition-property: border-width;
+  transition-property: border-width;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-reveal:hover:before, .hvr-reveal:focus:before, .hvr-reveal:active:before {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  border-width: 4px;
+}
+
+/* Underline Reveal */
+.hvr-underline-reveal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+
+/*heading text fade in and out continously*/
+/*#fadingTextContainer {
+  position: relative;
+  width: max-content;
+}*/
+/*
+.fading-text {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  white-space: nowrap; 
+}*/
+/*
+.fading-text.show {
+  opacity: 1;
+}*/
+
+/* Default container style */
+
+/*heading text fade in and out continously*/
+/* Original styles for screens larger than 991px */
+@media (min-width: 992px) {
+  #fadingTextContainer {
+    position: relative;
+    width: max-content;
+    /*margin: 0; *//* Reset any margin applied for centering on smaller screens */
+    /* margin-bottom: 122rem; */
+    /* margin-top: 122rem; */
+   
+    
+  }
+  #sampid{
+    /* margin-bottom: 1rem; */
+    margin-top: 1.5rem;
+  }
+
+  .fading-text {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    white-space: nowrap; /* Prevents line breaks */
+  }
+
+  .fading-text.show {
+    opacity: 1;
+  }
+}
+
+/* Styles for screens 991px and smaller */
+@media (max-width: 991px) {
+  #fadingTextContainer {
+    position: relative;
+    width: 100%; /* Ensure the container takes up the full width */
+    text-align: center; /* Center the text horizontally within the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  #sampid{
+    /* margin-bottom: 1rem; */
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .fading-text {
+    position: absolute; /* Stack the texts on top of each other */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    white-space: nowrap; /* Prevents line breaks */
+  }
+
+  .fading-text.show {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+/*Enlarge image on hover (edu images) */
+.cen {
+  max-width: 8rem; /* Adjusts the size, relative to the root font size */
+  height: auto; /* Maintains the aspect ratio */
+  display: block;
+  margin: 0 auto; /* Centers the image */
+  
+}
+
+.hov {
+  transition: transform 0.3s ease-in-out;
+  
+}
+
+.hov:hover {
+  transform: scale(1.05); /* Slightly enlarges the image on hover */
+}
+
+.experience-time {
+  white-space: nowrap; /* Prevents line breaks */
+}
+
+.resume-date {
+  text-align: right; /* Aligns content to the right on medium and larger screens */
+}
+
+
+/* For the vanishing designation js span headline */
+/* Center content for screens smaller than 971px */
+
+
+/* Media query to center the span element of education (time interval) for screens smaller than 770px */
+@media (max-width: 770px) {
+  .text-primary.experience-time {
+      display: block; /* Make the span a block element to center it */
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center; /* Center text inside the span */
+  }
+}

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;700&display=swap');
+
+:root {
+  --normal: 300;
+  --bold: 700;
+  --duration: 115ms;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --opacity: 0.4;
+}
+
+#add-step-animation {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  color: black;
+  font-variation-settings: "wght" var(--normal);  
+  text-decoration: none;
+}
+
+#add-step-animation .char {
+  --delay: calc(var(--char-index) * 0.024s);
+
+  display: inline-flex;
+  flex-direction: column;
+  letter-spacing: -0.05rem;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  transition:
+    font-variation-settings var(--duration) var(--ease),
+    opacity var(--duration) var(--ease);
+}
+
+#add-step-animation .char::before {
+  position: relative;
+  height: 0;
+  width: 100%;
+}
+
+#add-step-animation .char::before,
+#add-step-animation .char::after {
+  pointer-events: none;
+  font-variation-settings: "wght" var(--bold);
+}
+
+/* Handle spaces properly */
+#add-step-animation .whitespace {
+  width: 0.33em;
+  display: inline-block;
+}
+
+/* Step Sequence Animation */
+#add-step-animation .char {
+  opacity: var(--opacity);
+  font-variation-settings: "wght" var(--normal);
+  animation: step-sequence calc((var(--duration) / 1.5) * var(--char-total)) calc(var(--char-index) * calc(var(--duration) / 1.5)) steps(2, end) infinite;
+}
+
+#add-step-animation:hover .char {
+  opacity: var(--opacity);
+  font-variation-settings: "wght" var(--normal);
+  animation: step-sequence calc((var(--duration) / 1.5) * var(--char-total)) calc(var(--char-index) * calc(var(--duration) / 1.5)) steps(2, end) infinite;
+}
+
+@keyframes step-sequence {
+  0% {
+    opacity: 1;
+    transform: translateY(-2px);
+    font-variation-settings: "wght" var(--bold);
+  }
+  10%, 100% {
+    opacity: var(--opacity);
+    transform: translateY(0);
+    font-variation-settings: "wght" var(--normal);
+  }
+}
+
+.with-space:before,
+.with-space:after {
+  content: ' ';
+}
+
+/* Apply styles for screens smaller than 1200px */
+@media (max-width: 1200px) {
+  #add-step-animation {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    padding: 0.8rem 1rem; /* Adjust padding */
+  }
+
+  #add-step-animation .char {
+    letter-spacing: -0.02rem; /* Reduce negative letter-spacing */
+  }
+
+  #add-step-animation .whitespace {
+    width: 0.25em; /* Adjust space width */
+  }
+}
+
+/* Apply styles for screens smaller than 992px */
+@media (max-width: 992px) {
+  #add-step-animation {
+    font-size: 1rem; /* Further reduce font size for smaller screens */
+    padding: 0.6rem 0.8rem; /* Adjust padding */
+  }
+
+  #add-step-animation .char {
+    letter-spacing: -0.01rem; /* Further reduce negative letter-spacing */
+  }
+
+  #add-step-animation .whitespace {
+    width: 0.2em; /* Adjust space width */
+  }
+}
+
+/* Apply styles for screens smaller than 992px */
+@media (max-width: 992px) {
+  #add-step-animation {
+    font-size: 0.9rem; /* Further reduce font size */
+    padding: 0.5rem 0.7rem; /* Adjust padding */
+    display: flex; /* Ensure flexbox is applied properly */
+    flex-wrap: wrap; /* Allow text to wrap */
+  }
+
+  #add-step-animation .char {
+    letter-spacing: 0rem; /* Neutral letter-spacing to prevent overlap */
+  }
+
+  #add-step-animation .whitespace {
+    width: 0.15em; /* Adjust space width */
+  }
+}
+
+
+

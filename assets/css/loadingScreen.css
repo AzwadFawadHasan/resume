@@ -1,0 +1,102 @@
+/* styles.css */
+
+/* Fullscreen loading screen */
+/*
+
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+p {
+    font-size: 1.2rem;
+    color: #333;
+}*/
+
+
+
+#animation-container {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: serif;
+    background: radial-gradient(circle at 50% 35%, #334455, #000);
+    position: relative;
+  }
+  
+  #element1, #element2, #element3, #element4, #element5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 20vmin;
+    width: 3em;
+    height: 3em;
+    border-radius: 90% 95% 85% 105%;
+    background: #0f0;
+    mix-blend-mode: screen;
+    filter: hue-rotate(0deg);
+    animation: wobble 150ms linear infinite;
+    box-shadow: 0 0 .5em .2em #000 inset, 0 0 .15em 0 #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center;
+  }
+  
+  /* Individual element transformations */
+  #element1 {
+    transform: translate(-53%, -53%);
+    animation-duration: calc(150ms * 37);
+  }
+  #element2 {
+    transform: translate(-47%, -52%);
+    animation-duration: calc(150ms * 58);
+  }
+  #element3 {
+    transform: translate(-45%, -50%);
+    animation-duration: calc(150ms * 46);
+  }
+  #element4 {
+    transform: translate(-53%, -45%);
+    animation-duration: calc(150ms * 72);
+  }
+  #element5 {
+    transform: translate(-55%, -45%);
+    animation-duration: calc(150ms * 62);
+  }
+  
+  @keyframes wobble {
+    to {
+      filter: hue-rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+
+#content {
+    display: none;
+}

@@ -1,0 +1,24 @@
+/* General styling for the resume items */
+.resume-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  /* Pop-out effect on hover */
+  .resume-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  }
+  
+  /* Styling for mobile touch interaction */
+  @media (max-width: 767px) {
+    .resume-item {
+      touch-action: manipulation; /* Ensure smooth scrolling */
+    }
+  }
+  
+  /* Optional: Adding smooth scrolling for mobile touch */
+  html {
+    scroll-behavior: smooth;
+  }
+  

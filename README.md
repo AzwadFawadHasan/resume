@@ -1,15 +1,35 @@
-# CSE309MidtermProject
-This rep contains my resume (CSE309MidtermProject)
+# Personal Portfolio Website
+This rep contains my personal website.
 # Important Read ME First
 Open the project in offine mode with VScode's Live server extension, (otherwise some pictures Might not load)
 
 https://azwadfawadhasan.github.io/resume/
 
-### Midterm Project:
+## Changelog
+- v1.0: Initial release
+- v2: Simpler onepage style 
 
-Create a portfolio website consisting of your personal details,
- educational details, 
- job experience, 
- research work,X
- academic projects, 
- extra curricular activities etc. Basically create an online presence of your CV/Resume. Website should be developed using HTML/CSS and Flexbox. Following are few sample sites to take inspiration from. 
+
+
+## Contact
+- LinkedIn: [Azwad Fawad Hasan](https://www.linkedin.com/in/azwad-fawad-hasan-369170217/)
+- Email: azwadfawadhasan@gmail.com
+
+
+### Misc
+![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=AzwadFawadHasan.resume)
+
+
+![Visitor Count (komarev)](https://komarev.com/ghpvc/?username=AzwadFawadHasan&repo=resume)
+
+
+![Languages](https://img.shields.io/github/languages/top/AzwadFawadHasan/resume)
+
+
+[Live Demo](https://azwadfawadhasan.github.io/resume/)
+
+
+![GitHub stars](https://img.shields.io/github/stars/AzwadFawadHasan/resume)
+![GitHub forks](https://img.shields.io/github/forks/AzwadFawadHasan/resume)
+
+

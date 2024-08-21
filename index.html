@@ -2468,7 +2468,24 @@
 
 
 <footer class="text-center text-lg-start bg-light text-muted"><span>
-Last Updated 22nd Aug'24 
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const lastUpdatedElement = document.getElementById('last-updated');
+			if (lastUpdatedElement) {
+				const lastModifiedDate = new Date(document.lastModified);
+				const formattedDate = lastModifiedDate.toLocaleDateString('en-US', {
+					year: 'numeric',
+					month: 'long',
+					day: 'numeric'
+				});
+				lastUpdatedElement.textContent = `Last updated: ${formattedDate}`;
+			}
+		});
+		
+	</script>
+    <p id="last-updated">Last updated: </p>
+
+
 <!-- <a href="https://www.labri.fr/perso/mclement/">Michaël Clément/ website last update @ -->
 <!-- </a> -->
 .

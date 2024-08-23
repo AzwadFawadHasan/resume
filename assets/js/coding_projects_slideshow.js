@@ -144,6 +144,44 @@ const slideshows = {
   
 
 
+    ],
+    
+    slideshowimg_aamra_erp: [
+        "assets/img/projects/aamra_erp/1.jpg",
+        "assets/img/projects/aamra_erp/2.jpg",
+        "assets/img/projects/aamra_erp/3.jpg",
+        "assets/img/projects/aamra_erp/4.jpg",
+        "assets/img/projects/aamra_erp/5.jpg",
+        
+        "assets/img/projects/aamra_erp/6.jpg",
+        "assets/img/projects/aamra_erp/7.jpg",
+  
+
+
+
+    ],
+    
+
+    slideshowimg_calculatorApp_flutter_project_2: [
+        "assets/img/projects/calculatorApp_flutter_project_2/1.jpg",
+        "assets/img/projects/calculatorApp_flutter_project_2/2.jpg",
+        "assets/img/projects/calculatorApp_flutter_project_2/3.jpg",
+      
+    ],
+    slideshowimg_plan_it: [
+        "assets/img/projects/planIT_UI_UX_flutter_project/1.jpg",
+        "assets/img/projects/planIT_UI_UX_flutter_project/2.jpg",
+  
+      
+    ],
+    slideshowimg_devOpsProject: [
+        "assets/img/projects/DevOpsProject_beeHome/1.jpg",
+        "assets/img/projects/DevOpsProject_beeHome/2.jpg",
+        "assets/img/projects/DevOpsProject_beeHome/3.jpg",
+        "assets/img/projects/DevOpsProject_beeHome/4.jpg",
+        "assets/img/projects/DevOpsProject_beeHome/5.jpg",
+  
+      
     ]
 
 
@@ -170,6 +208,10 @@ const currentIndex = {
     slideshowimg16: 0,
     slideshowimgA1: 0,
     slideshowimgV1: 0,
+    slideshowimg_aamra_erp: 0,
+    slideshowimg_calculatorApp_flutter_project_2: 0,
+    slideshowimg_plan_it: 0,
+    slideshowimg_devOpsProject: 0,
 
 
     // Repeat for all other image tags
@@ -202,4 +244,8 @@ setInterval(() => updateSlideshow("slideshowimg15"), 3000);  // Change image eve
 setInterval(() => updateSlideshow("slideshowimg16"), 2500);  // Change image every 5 seconds for img 3
 setInterval(() => updateSlideshow("slideshowimgA1"), 3000);  // Change image every 5 seconds for img 3
 setInterval(() => updateSlideshow("slideshowimgV1"), 3000);  // Change image every 5 seconds for img 3
+setInterval(() => updateSlideshow("slideshowimg_aamra_erp"), 3000);  // Change image every 5 seconds for img 3
+setInterval(() => updateSlideshow("slideshowimg_calculatorApp_flutter_project_2"), 3000);  // Change image every 5 seconds for img 3
+setInterval(() => updateSlideshow("slideshowimg_plan_it"), 3000);  // Change image every 5 seconds for img 3
+setInterval(() => updateSlideshow("slideshowimg_devOpsProject"), 3000);  // Change image every 5 seconds for img 3
 // Repeat for all other image tags

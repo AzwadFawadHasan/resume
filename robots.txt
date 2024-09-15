@@ -1,7 +1,6 @@
 User-agent: *
 Disallow: /private/
 Disallow: /temp/
-Disallow: /*.pdf$
-Crawl-delay: 10
 Allow: /public/
+Allow: /resume/
 Sitemap: https://azwadfawadhasan.github.io/resume/sitemap.xml

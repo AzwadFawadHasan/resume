@@ -236,135 +236,123 @@
 					</div>
 				</div>
 			</div>
+			<script>
+				$(document).ready(function () {
+				  // When a nav link is clicked
+				  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+					var target = $(e.target).attr("href"); // Get the target of the tab
+					window.history.pushState(null, null, target); // Change the URL without reloading the page
+				  });
+			  
+				  // When page is loaded or refreshed, open the correct tab if the URL has a fragment
+				  var hash = window.location.hash;
+				  if (hash) {
+					$('.nav-link[href="' + hash + '"]').tab('show'); // Show the tab corresponding to the URL fragment
+				  }
+				});
+			</script>
+			  
 			
 			<div class="row pb-3">	
 				<ul class="nav nav-tabs" id="nav-tab-id">
 					<li class="nav-item">
-						<a class="nav-link active" data-toggle="tab" href="#bio" id="about-link">
+						<a class="nav-link active" data-toggle="tab" href="#bio" data-target="#bio" id="about-link">
 							<span class="hvr-wobble-horizontal">
-								<lord-icon
-									id="about-icon"
-									src="https://cdn.lordicon.com/hrjifpbq.json"
-									trigger="in"
-									delay="500"
-									state="in-account"
-									style="width:1.5rem;height:1.5rem">
-								</lord-icon> About Me
+								<lord-icon id="about-icon" src="https://cdn.lordicon.com/hrjifpbq.json" trigger="in" delay="500" state="in-account" style="width:1.5rem;height:1.5rem"></lord-icon>
+								About Me
 							</span>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#education" id="edu-link"><span class="hvr-wobble-horizontal"><lord-icon
-							id="edu-icon"
-							src="https://cdn.lordicon.com/mjcariee.json"
-							trigger="in"
-    						delay="800"
-    						state="in-account" style="width:1.5rem;height:1.5rem">
-						</lord-icon>Education</span></a>
+						<a class="nav-link" data-toggle="tab" href="#education" data-target="#education" id="edu-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="edu-icon" src="https://cdn.lordicon.com/mjcariee.json" trigger="in" delay="800" state="in-account" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Education
+							</span>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#job_experience" data-toggle="tab" id="work-link"><span class="hvr-wobble-horizontal"><lord-icon
-							id="work-icon"
-							src="https://cdn.lordicon.com/lxrsqlrx.json"
-							trigger="in"
-							delay="1100"
-							state="in-work"
-							style="width:1.5rem;height:1.5rem">
-						</lord-icon> Industry Work</span></a>
+						<a class="nav-link" href="#job_experience" data-target="#job_experience" data-toggle="tab" id="work-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="work-icon" src="https://cdn.lordicon.com/lxrsqlrx.json" trigger="in" delay="1100" state="in-work" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Industry Work
+							</span>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#tabs-publications" id="pub-link"><span class="hvr-wobble-horizontal"><lord-icon
-							id="pub-icon"
-							src="https://cdn.lordicon.com/rwtswsap.json"
-							trigger="in"
-							delay="1400"
-							state="in-newspaper"
-							style="width:1.5rem;height:1.5rem">
-						</lord-icon> Publications</span></a>
+						<a class="nav-link" data-toggle="tab" href="#tabs-publications" data-target="#tabs-publications" id="pub-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="pub-icon" src="https://cdn.lordicon.com/rwtswsap.json" trigger="in" delay="1400" state="in-newspaper" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Publications
+							</span>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#coding_projects" id="coding-link"><span class="hvr-wobble-horizontal"><lord-icon
-							id="coding-icon"
-							src="https://cdn.lordicon.com/eodeknny.json"
-							trigger="in"
-							delay="1700"
-							state="in-code"
-							style="width:1.5rem;height:1.5rem">
-						</lord-icon> Coding Projects</span></a>
+						<a class="nav-link" data-toggle="tab" href="#coding_projects" data-target="#coding_projects" id="coding-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="coding-icon" src="https://cdn.lordicon.com/eodeknny.json" trigger="in" delay="1700" state="in-code" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Coding Projects
+							</span>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#achievements" id="achievements-link"><span class="hvr-wobble-horizontal"><lord-icon
-							
-							id="achievements-icon"
-							src="https://cdn.lordicon.com/jcepibgt.json"
-							trigger="in"
-							delay="2100"
-							state="in-celebration"
-							style="width:1.5rem;height:1.5rem;display:none;">
-						</lord-icon> Achievements</span></a>
+						<a class="nav-link" data-toggle="tab" href="#achievements" data-target="#achievements" id="achievements-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="achievements-icon" src="https://cdn.lordicon.com/jcepibgt.json" trigger="in" delay="2100" state="in-celebration" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Achievements
+							</span>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#research_interests" id="research_interest-link"><span class="hvr-wobble-horizontal">
-						<lord-icon
-							id="research_interest-icon"
-							src="https://cdn.lordicon.com/omiqopzf.json"
-							trigger="in"
-							delay="2300"
-							state="in-book"
-							style="width:1.5rem;height:1.5rem">
-						</lord-icon> Research Interests</span></a>
+						<a class="nav-link" data-toggle="tab" href="#research_interests" data-target="#research_interests" id="research_interest-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="research_interest-icon" src="https://cdn.lordicon.com/omiqopzf.json" trigger="in" delay="2300" state="in-book" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Research Interests
+							</span>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#volunteering" data-toggle="tab" id="volunteering-link"><span class="hvr-wobble-horizontal"><lord-icon
-							id="volunteering-icon"
-							src="https://cdn.lordicon.com/ozckswtv.json"
-							trigger="in"
-							delay="2500"
-							state="in-accesibility"
-							style="width:1.5rem;height:1.5rem">
-						</lord-icon> Volunteering</span></a>
+						<a class="nav-link" href="#volunteering" data-target="#volunteering" data-toggle="tab" id="volunteering-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="volunteering-icon" src="https://cdn.lordicon.com/ozckswtv.json" trigger="in" delay="2500" state="in-accesibility" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Volunteering
+							</span>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#tech_stack" id="tech_stack-link"><span class="hvr-wobble-horizontal"><lord-icon
-							id="tech_stack-icon"
-							src="https://cdn.lordicon.com/wkvacbiw.json"
-							trigger="in"
-							delay="2700"
-							state="in-build"
-							style="width:1.5rem;height:1.5rem">
-						</lord-icon> Tech Stack</span></a>
+						<a class="nav-link" data-toggle="tab" href="#tech_stack" data-target="#tech_stack" id="tech_stack-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="tech_stack-icon" src="https://cdn.lordicon.com/wkvacbiw.json" trigger="in" delay="2700" state="in-build" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Tech Stack
+							</span>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#certifications" id="cert-link"><span class="hvr-wobble-horizontal"><lord-icon
-							id="cert-icon"
-							src="https://cdn.lordicon.com/oiiqgosg.json"
-							trigger="in"
-							delay="3000"
-							state="in-bookmark"
-							state="hover-bookmark-2"
-							style="width:1.5rem;height:1.5rem">
-						</lord-icon> Certifications</span></a>
+						<a class="nav-link" data-toggle="tab" href="#certifications" data-target="#certifications" id="cert-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="cert-icon" src="https://cdn.lordicon.com/oiiqgosg.json" trigger="in" delay="3000" state="in-bookmark" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Certifications
+							</span>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#blog" data-toggle="tab" id="blog-link"><span class="hvr-wobble-horizontal"><lord-icon
-							id="blog-icon"
-							src="https://cdn.lordicon.com/ipnwkgdy.json"
-							trigger="in"
-							delay="3300"
-							state="in-view-5"
-							style="width:1.5rem;height:1.5rem">
-						</lord-icon> Blog</span></a>
+						<a class="nav-link" href="#blog" data-target="#blog" data-toggle="tab" id="blog-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="blog-icon" src="https://cdn.lordicon.com/ipnwkgdy.json" trigger="in" delay="3300" state="in-view-5" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Blog
+							</span>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#miscellaneous" id="misc-link"><span class="hvr-wobble-horizontal"><lord-icon
-							id="misc-icon"
-							src="https://cdn.lordicon.com/jnikqyih.json"
-							trigger="in"
-							delay="3500"
-							state="in-category"
-							style="width:1.5rem;height:1.5rem">
-						</lord-icon> Miscellaneous</span></a>
+						<a class="nav-link" data-toggle="tab" href="#miscellaneous" data-target="#miscellaneous" id="misc-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="misc-icon" src="https://cdn.lordicon.com/jnikqyih.json" trigger="in" delay="3500" state="in-category" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Miscellaneous
+							</span>
+						</a>
 					</li>
+				
+				
 
 					<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@static logos @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->		  
 					<!-- <li class="nav-item">
@@ -1447,12 +1435,12 @@
 														<li class="tagcloud-tag" style="--index: 3"><div><a href="https://www.php.net" target="_blank">PHP<lord-icon src="https://cdn.lordicon.com/ydukgqyw.json" trigger="loop" style="width:1.5rem;height:1.5rem"></lord-icon></a></div></li>
 														<li class="tagcloud-tag" style="--index: 4"><div><a href="https://www.mysql.com" target="_blank">SQL<img src="assets/img/tech_stack/3_sql.gif" alt="" style="width:1.5rem;height:1.5rem"></a></div></li>
 														<li class="tagcloud-tag" style="--index: 5"><div><a href="https://isocpp.org" target="_blank">C++<lord-icon src="https://cdn.lordicon.com/bizvwhwt.json" trigger="loop" style="width:1.5rem;height:1.5rem"></lord-icon></a></div></li>
-														<li class="tagcloud-tag" style="--index: 6"><div><a href="https://github.com/micku7zu/vanilla-tilt.js" target="_blank">Tilt.js</a></div></li>
-														<li class="tagcloud-tag" style="--index: 7"><div><a href="https://threejs.org/" target="_blank">Three.js</a></div></li>
-														<li class="tagcloud-tag" style="--index: 8"><div><a href="https://angularjs.org/" target="_blank">Angular</a></div></li>
-														<li class="tagcloud-tag" style="--index: 9"><div><a href="https://reactjs.org/" target="_blank">React</a></div></li>
-														<li class="tagcloud-tag" style="--index: 10"><div><a href="https://svelte.dev/" target="_blank">Svelte</a></div></li>
-														<li class="tagcloud-tag" style="--index: 11"><div><a href="https://nextjs.org/" target="_blank">Next.js</a></div></li>
+														<li class="tagcloud-tag" style="--index: 6"><div><a href="https://flask.palletsprojects.com/en/3.0.x/" target="_blank">Flask<img src="assets/img/tech_stack/4_flask.gif" alt="" style="width:2.5rem;height:1.5rem"></a></div></li>
+														<li class="tagcloud-tag" style="--index: 7"><div><a href="https://www.djangoproject.com" target="_blank">Django<img src="assets/img/tech_stack/5_django.gif" alt="" style="width:1.5rem;height:1.5rem"></a></div></li>
+														<li class="tagcloud-tag" style="--index: 8"><div><a href="https://getbootstrap.com" target="_blank">Bootstrap<img src="assets/img/tech_stack/6_bootstrap.gif" alt="" style="width:1.5rem;height:1.5rem"></a></div></li>
+														<li class="tagcloud-tag" style="--index: 9"><div><a href="https://streamlit.io" target="_blank">Streamlit<img src="assets/img/tech_stack/7.gif" alt="" style="width:1.5rem;height:1.5rem"></a></div></li>
+														<li class="tagcloud-tag" style="--index: 10"><div><a href="https://plotly.com" target="_blank"> Plotly.js<img src="assets/img/tech_stack/8v2.gif" alt="" style="width:1.5rem;height:1.5rem"></a></div></li>
+														<li class="tagcloud-tag" style="--index: 11"><div><a href="https://nextjs.org/" target="_blank">ApexCharts.js</a></div></li>
 														<li class="tagcloud-tag" style="--index: 12"><div><a href="https://www.gatsbyjs.com/" target="_blank">Gatsby</a></div></li>
 														<li class="tagcloud-tag" style="--index: 13"><div><a href="https://expressjs.com/" target="_blank">Express.js</a></div></li>
 														<li class="tagcloud-tag" style="--index: 14"><div><a href="https://www.sencha.com/products/extjs/" target="_blank">ExtJS</a></div></li>

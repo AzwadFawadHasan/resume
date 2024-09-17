@@ -46,7 +46,7 @@
       
       .pubcard-img {
         width: 100%;
-        height: 20%;
+        height: auto;
         max-width: 400px;
         transition: transform 0.2s ease;
       }

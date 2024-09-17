@@ -103,6 +103,7 @@
 		<!-- Step Animation scripts. Make sure to add data-animation="step-sequence" id="add-step-animation" -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;700&display=swap">
 		<link rel="stylesheet" href="assets/css/step_animation.css">
+		<link rel="stylesheet" href="assets/css/certifications.css">
 		<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
 		<script src="assets/js/stepAnimation.js"></script>
 		<script src="assets/js/textFadeInAndOut.js"></script>
@@ -142,13 +143,15 @@
 		<!-- typedjs -->
 		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 		<!-- loading screen  -->
-		<link rel="stylesheet" href="assets/css/loadingScreen.css">
+		<!-- <link rel="stylesheet" href="assets/css/loadingScreen.css"> -->
 	</head>
 	<body>
 		<!-- Loading Screen -->
-		<div id="loading-screen">
+
+
+		<!-- <div id="loading-screen"> -->
 			<!-- <div class="spinner"></div> -->
-			<main id="animation-container" class="spinner">
+			<!-- <main id="animation-container" class="spinner">
 				<div id="element1"></div>
 				<div id="element2"></div>
 				<div id="element3"></div>
@@ -156,9 +159,12 @@
 				<div id="element5"></div>
 			</main>
 			<div>Loading Azwad's Website.....</div>
-		</div>
+		</div> -->
 		<!-- My Website Content -->
-		<div id="content" style="display: none;">
+		<!-- <div id="content" style="display: none;"> -->
+
+
+
 		<!-- Your website content goes here -->
 		<div class="container py-4">
 			<!-- making the card gain -->
@@ -231,135 +237,123 @@
 					</div>
 				</div>
 			</div>
+			<script>
+				$(document).ready(function () {
+				  // When a nav link is clicked
+				  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+					var target = $(e.target).attr("href"); // Get the target of the tab
+					window.history.pushState(null, null, target); // Change the URL without reloading the page
+				  });
+			  
+				  // When page is loaded or refreshed, open the correct tab if the URL has a fragment
+				  var hash = window.location.hash;
+				  if (hash) {
+					$('.nav-link[href="' + hash + '"]').tab('show'); // Show the tab corresponding to the URL fragment
+				  }
+				});
+			</script>
+			  
 			
 			<div class="row pb-3">	
 				<ul class="nav nav-tabs" id="nav-tab-id">
 					<li class="nav-item">
-						<a class="nav-link active" data-toggle="tab" href="#bio" id="about-link">
+						<a class="nav-link active" data-toggle="tab" href="#bio" data-target="#bio" id="about-link">
 							<span class="hvr-wobble-horizontal">
-								<lord-icon
-									id="about-icon"
-									src="https://cdn.lordicon.com/hrjifpbq.json"
-									trigger="in"
-									delay="500"
-									state="in-account"
-									style="width:1.5rem;height:1.5rem">
-								</lord-icon> About Me
+								<lord-icon id="about-icon" src="https://cdn.lordicon.com/hrjifpbq.json" trigger="in" delay="500" state="in-account" style="width:1.5rem;height:1.5rem"></lord-icon>
+								About Me
 							</span>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#education" id="edu-link"><span class="hvr-wobble-horizontal"><lord-icon
-							id="edu-icon"
-							src="https://cdn.lordicon.com/mjcariee.json"
-							trigger="in"
-    						delay="800"
-    						state="in-account" style="width:1.5rem;height:1.5rem">
-						</lord-icon>Education</span></a>
+						<a class="nav-link" data-toggle="tab" href="#education" data-target="#education" id="edu-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="edu-icon" src="https://cdn.lordicon.com/mjcariee.json" trigger="in" delay="800" state="in-account" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Education
+							</span>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#job_experience" data-toggle="tab" id="work-link"><span class="hvr-wobble-horizontal"><lord-icon
-							id="work-icon"
-							src="https://cdn.lordicon.com/lxrsqlrx.json"
-							trigger="in"
-							delay="1100"
-							state="in-work"
-							style="width:1.5rem;height:1.5rem">
-						</lord-icon> Industry Work</span></a>
+						<a class="nav-link" href="#job_experience" data-target="#job_experience" data-toggle="tab" id="work-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="work-icon" src="https://cdn.lordicon.com/lxrsqlrx.json" trigger="in" delay="1100" state="in-work" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Industry Work
+							</span>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#tabs-publications" id="pub-link"><span class="hvr-wobble-horizontal"><lord-icon
-							id="pub-icon"
-							src="https://cdn.lordicon.com/rwtswsap.json"
-							trigger="in"
-							delay="1400"
-							state="in-newspaper"
-							style="width:1.5rem;height:1.5rem">
-						</lord-icon> Publications</span></a>
+						<a class="nav-link" data-toggle="tab" href="#tabs-publications" data-target="#tabs-publications" id="pub-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="pub-icon" src="https://cdn.lordicon.com/rwtswsap.json" trigger="in" delay="1400" state="in-newspaper" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Publications
+							</span>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#coding_projects" id="coding-link"><span class="hvr-wobble-horizontal"><lord-icon
-							id="coding-icon"
-							src="https://cdn.lordicon.com/eodeknny.json"
-							trigger="in"
-							delay="1700"
-							state="in-code"
-							style="width:1.5rem;height:1.5rem">
-						</lord-icon> Coding Projects</span></a>
+						<a class="nav-link" data-toggle="tab" href="#coding_projects" data-target="#coding_projects" id="coding-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="coding-icon" src="https://cdn.lordicon.com/eodeknny.json" trigger="in" delay="1700" state="in-code" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Coding Projects
+							</span>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#achievements" id="achievements-link"><span class="hvr-wobble-horizontal"><lord-icon
-							
-							id="achievements-icon"
-							src="https://cdn.lordicon.com/jcepibgt.json"
-							trigger="in"
-							delay="2100"
-							state="in-celebration"
-							style="width:1.5rem;height:1.5rem;display:none;">
-						</lord-icon> Achievements</span></a>
+						<a class="nav-link" data-toggle="tab" href="#achievements" data-target="#achievements" id="achievements-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="achievements-icon" src="https://cdn.lordicon.com/jcepibgt.json" trigger="in" delay="2100" state="in-celebration" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Achievements
+							</span>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#research_interests" id="research_interest-link"><span class="hvr-wobble-horizontal">
-						<lord-icon
-							id="research_interest-icon"
-							src="https://cdn.lordicon.com/omiqopzf.json"
-							trigger="in"
-							delay="2300"
-							state="in-book"
-							style="width:1.5rem;height:1.5rem">
-						</lord-icon> Research Interests</span></a>
+						<a class="nav-link" data-toggle="tab" href="#research_interests" data-target="#research_interests" id="research_interest-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="research_interest-icon" src="https://cdn.lordicon.com/omiqopzf.json" trigger="in" delay="2300" state="in-book" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Research Interests
+							</span>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#volunteering" data-toggle="tab" id="volunteering-link"><span class="hvr-wobble-horizontal"><lord-icon
-							id="volunteering-icon"
-							src="https://cdn.lordicon.com/ozckswtv.json"
-							trigger="in"
-							delay="2500"
-							state="in-accesibility"
-							style="width:1.5rem;height:1.5rem">
-						</lord-icon> Volunteering</span></a>
+						<a class="nav-link" href="#volunteering" data-target="#volunteering" data-toggle="tab" id="volunteering-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="volunteering-icon" src="https://cdn.lordicon.com/ozckswtv.json" trigger="in" delay="2500" state="in-accesibility" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Volunteering
+							</span>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#tech_stack" id="tech_stack-link"><span class="hvr-wobble-horizontal"><lord-icon
-							id="tech_stack-icon"
-							src="https://cdn.lordicon.com/wkvacbiw.json"
-							trigger="in"
-							delay="2700"
-							state="in-build"
-							style="width:1.5rem;height:1.5rem">
-						</lord-icon> Tech Stack</span></a>
+						<a class="nav-link" data-toggle="tab" href="#tech_stack" data-target="#tech_stack" id="tech_stack-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="tech_stack-icon" src="https://cdn.lordicon.com/wkvacbiw.json" trigger="in" delay="2700" state="in-build" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Tech Stack
+							</span>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#certifications" id="cert-link"><span class="hvr-wobble-horizontal"><lord-icon
-							id="cert-icon"
-							src="https://cdn.lordicon.com/oiiqgosg.json"
-							trigger="in"
-							delay="3000"
-							state="in-bookmark"
-							state="hover-bookmark-2"
-							style="width:1.5rem;height:1.5rem">
-						</lord-icon> Certifications</span></a>
+						<a class="nav-link" data-toggle="tab" href="#certifications" data-target="#certifications" id="cert-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="cert-icon" src="https://cdn.lordicon.com/oiiqgosg.json" trigger="in" delay="3000" state="in-bookmark" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Certifications
+							</span>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#blog" data-toggle="tab" id="blog-link"><span class="hvr-wobble-horizontal"><lord-icon
-							id="blog-icon"
-							src="https://cdn.lordicon.com/ipnwkgdy.json"
-							trigger="in"
-							delay="3300"
-							state="in-view-5"
-							style="width:1.5rem;height:1.5rem">
-						</lord-icon> Blog</span></a>
+						<a class="nav-link" href="#blog" data-target="#blog" data-toggle="tab" id="blog-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="blog-icon" src="https://cdn.lordicon.com/ipnwkgdy.json" trigger="in" delay="3300" state="in-view-5" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Blog
+							</span>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#miscellaneous" id="misc-link"><span class="hvr-wobble-horizontal"><lord-icon
-							id="misc-icon"
-							src="https://cdn.lordicon.com/jnikqyih.json"
-							trigger="in"
-							delay="3500"
-							state="in-category"
-							style="width:1.5rem;height:1.5rem">
-						</lord-icon> Miscellaneous</span></a>
+						<a class="nav-link" data-toggle="tab" href="#miscellaneous" data-target="#miscellaneous" id="misc-link">
+							<span class="hvr-wobble-horizontal">
+								<lord-icon id="misc-icon" src="https://cdn.lordicon.com/jnikqyih.json" trigger="in" delay="3500" state="in-category" style="width:1.5rem;height:1.5rem"></lord-icon>
+								Miscellaneous
+							</span>
+						</a>
 					</li>
+				
+				
 
 					<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@static logos @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->		  
 					<!-- <li class="nav-item">
@@ -648,7 +642,7 @@
 									<div class="pubcard-subtitle"><b>Azwad Fawad Hasan</b></div>
 									<div class="pubcard-bar"></div>
 									<div class="pubcard-subtitle">IUB Academic Repository</div>
-									<div class="pubcard-description">Detailed description or abstract of the publication goes here, summarizing the key findings or topics covered in the paper or article.</div>
+									<div class="pubcard-description">This was my final year undergrad internship project, done during my time working at Aamra Networks Ltd.</div>
 									<div class="pubcard-tagbox">
 										<button><a href="https://ar.iub.edu.bd/handle/11348/699">Read More</a></button>
 									</div>
@@ -1130,7 +1124,7 @@
 					
 					<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 					<div class="tab-pane container fade" id="research_interests">
-						<h1 class="pb-1"><b>Include your sop here:</b></h1>
+						<!-- <h1 class="pb-1"><b>Include your sop here:</b></h1> -->
 						
 						<div class="flipbook centered" id="flipbook">
 							<div class="leaf">
@@ -1388,17 +1382,22 @@
 							C++<lord-icon src="https://cdn.lordicon.com/bizvwhwt.json" trigger="loop" style="width:1.5rem;height:1.5rem"></lord-icon>, 
 							Flask, Django, Bootstrap, Streamlit, MySQL, SQLAlchemy, Plotly.js, ApexCharts.js,
 							Git, SVN, Celery, Redis, OpenCV, PyTorch, TensorFlow, Scikit-learn, YOLOv8, Pandas, Mininet, NS-3, iPerf,HTML5, CSS3
-						</p> -->
-						<div>I have worked with the following: </div>
-						Python<lord-icon src="https://cdn.lordicon.com/yfenpryf.json" trigger="loop" style="width:1.5rem;height:1.5rem"></lord-icon>
+
+
+							Python<lord-icon src="https://cdn.lordicon.com/yfenpryf.json" trigger="loop" style="width:1.5rem;height:1.5rem"></lord-icon>
 						Python<lord-icon src="https://cdn.lordicon.com/ydukgqyw.json" trigger="loop" style="width:1.5rem;height:1.5rem"></lord-icon>
 						Python<lord-icon src="https://cdn.lordicon.com/bizvwhwt.json" trigger="loop" style="width:1.5rem;height:1.5rem"></lord-icon>
-						Python,JavaScript, PHP, SQL, C++, Flask, Django, Bootstrap, Streamlit, MySQL, SQLAlchemy, Plotly.js, ApexCharts.js,
-						Git, SVN, Celery, Redis, OpenCV, PyTorch, TensorFlow, Scikit-learn, YOLOv8, Pandas, Mininet, NS-3, iPerf,HTML5, CSS3
+
 						<img src="https://media.giphy.com/media/KAq5w47R9rmTuvWOWa/giphy.gif?cid=790b7611n13j1ltldy7mvwjgp3skj9gp8ttu1eodhnckl189&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="" style="width:1.5rem;height:1.5rem">
 						<img src="assets/img/tech_stack/2_js.gif" alt="" style="width:1.5rem;height:1.5rem">
 						<img src="assets/img/tech_stack/3_sql.gif" alt="" style="width:1.5rem;height:1.5rem">
 						<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTZoMzFncWR2YmRqcmh1YTRqcmpod200ejhzZGZrZjB2a3B0bnI0dyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/rp4930yjtZGwOjlpq0/giphy.gif" alt="" style="width:1.5rem;height:1.5rem">
+						</p> -->
+						<div>I have worked with the following: </div>
+						
+						Python,JavaScript, PHP, SQL, C++, Flask, Django, Bootstrap, Streamlit, MySQL, SQLAlchemy, Plotly.js, ApexCharts.js,
+						Git, SVN, Celery, Redis, OpenCV, PyTorch, TensorFlow, Scikit-learn, YOLOv8, Pandas, Mininet, NS-3, iPerf,HTML5, CSS3
+						
 
 						<!-- <ul>
 						
@@ -1442,17 +1441,17 @@
 														<li class="tagcloud-tag" style="--index: 3"><div><a href="https://www.php.net" target="_blank">PHP<lord-icon src="https://cdn.lordicon.com/ydukgqyw.json" trigger="loop" style="width:1.5rem;height:1.5rem"></lord-icon></a></div></li>
 														<li class="tagcloud-tag" style="--index: 4"><div><a href="https://www.mysql.com" target="_blank">SQL<img src="assets/img/tech_stack/3_sql.gif" alt="" style="width:1.5rem;height:1.5rem"></a></div></li>
 														<li class="tagcloud-tag" style="--index: 5"><div><a href="https://isocpp.org" target="_blank">C++<lord-icon src="https://cdn.lordicon.com/bizvwhwt.json" trigger="loop" style="width:1.5rem;height:1.5rem"></lord-icon></a></div></li>
-														<li class="tagcloud-tag" style="--index: 6"><div><a href="https://github.com/micku7zu/vanilla-tilt.js" target="_blank">Tilt.js</a></div></li>
-														<li class="tagcloud-tag" style="--index: 7"><div><a href="https://threejs.org/" target="_blank">Three.js</a></div></li>
-														<li class="tagcloud-tag" style="--index: 8"><div><a href="https://angularjs.org/" target="_blank">Angular</a></div></li>
-														<li class="tagcloud-tag" style="--index: 9"><div><a href="https://reactjs.org/" target="_blank">React</a></div></li>
-														<li class="tagcloud-tag" style="--index: 10"><div><a href="https://svelte.dev/" target="_blank">Svelte</a></div></li>
-														<li class="tagcloud-tag" style="--index: 11"><div><a href="https://nextjs.org/" target="_blank">Next.js</a></div></li>
-														<li class="tagcloud-tag" style="--index: 12"><div><a href="https://www.gatsbyjs.com/" target="_blank">Gatsby</a></div></li>
-														<li class="tagcloud-tag" style="--index: 13"><div><a href="https://expressjs.com/" target="_blank">Express.js</a></div></li>
-														<li class="tagcloud-tag" style="--index: 14"><div><a href="https://www.sencha.com/products/extjs/" target="_blank">ExtJS</a></div></li>
-														<li class="tagcloud-tag" style="--index: 15"><div><a href="https://mithril.js.org/" target="_blank">Mithril</a></div></li>
-														<li class="tagcloud-tag" style="--index: 16"><div><a href="https://backbonejs.org/" target="_blank">Backbone.js</a></div></li>
+														<li class="tagcloud-tag" style="--index: 6"><div><a href="https://flask.palletsprojects.com/en/3.0.x/" target="_blank">Flask<img src="assets/img/tech_stack/4_flask.gif" alt="" style="width:2.5rem;height:1.5rem"></a></div></li>
+														<li class="tagcloud-tag" style="--index: 7"><div><a href="https://www.djangoproject.com" target="_blank">Django<img src="assets/img/tech_stack/5_django.gif" alt="" style="width:1.5rem;height:1.5rem"></a></div></li>
+														<li class="tagcloud-tag" style="--index: 8"><div><a href="https://getbootstrap.com" target="_blank">Bootstrap<img src="assets/img/tech_stack/6_bootstrap.gif" alt="" style="width:1.5rem;height:1.5rem"></a></div></li>
+														<li class="tagcloud-tag" style="--index: 9"><div><a href="https://streamlit.io" target="_blank">Streamlit<img src="assets/img/tech_stack/7.gif" alt="" style="width:1.5rem;height:1.5rem"></a></div></li>
+														<li class="tagcloud-tag" style="--index: 10"><div><a href="https://plotly.com" target="_blank"> Plotly.js<img src="assets/img/tech_stack/8v2.gif" alt="" style="width:1.5rem;height:1.5rem"></a></div></li>
+														<li class="tagcloud-tag" style="--index: 11"><div><a href="https://nextjs.org/" target="_blank">ApexCharts.js</a></div></li>
+														<li class="tagcloud-tag" style="--index: 12"><div><a href="https://www.sqlalchemy.org/" target="_blank">SQLAlchemy<img src="assets/img/tech_stack/9.gif" alt="" style="width:2.5rem;height:1.5rem"></a></div></li>
+														<li class="tagcloud-tag" style="--index: 13"><div><a href="https://apexcharts.com" target="_blank">ApexCharts.js<img src="assets/img/tech_stack/10.gif" alt="" style="width:1.5rem;height:1.5rem"></a></div></li>
+														<li class="tagcloud-tag" style="--index: 14"><div><a href="https://git-scm.com" target="_blank">git<lord-icon src="https://cdn.lordicon.com/vyahiuge.json" trigger="loop" style="width:1.5rem;height:1.5rem"></lord-icon></a></div></li>
+														<li class="tagcloud-tag" style="--index: 15"><div><a href="https://tortoisesvn.net" target="_blank">SVN<img src="assets/img/tech_stack/11.gif" alt="" style="width:1.5rem;height:1.5rem"></a></div></li>
+														<li class="tagcloud-tag" style="--index: 16"><div><a href="https://docs.celeryq.dev/en/stable/getting-started/introduction.html" target="_blank">Celery<img src="assets/img/tech_stack/12.gif" alt="" style="width:2.5rem;height:1.5rem"></a></div></li>
 														<li class="tagcloud-tag" style="--index: 17"><div><a href="https://jquery.com/" target="_blank">jQuery</a></div></li>
 														<li class="tagcloud-tag" style="--index: 18"><div><a href="https://playcanvas.com/" target="_blank">PlayCanvas</a></div></li>
 														<li class="tagcloud-tag" style="--index: 19"><div><a href="https://polymer-library.polymer-project.org/" target="_blank">Polymer</a></div></li>
@@ -1544,28 +1543,98 @@
 					</div>
 					<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 					<div class="tab-pane container fade" id="certifications">
-						<h1 class="pb-1"><b>visit my linkedin</b></h1>
-						<ul>
-							<li><a href="#">Will list soon</a></li>
-							
-						</ul>
-						
+
+						<section id="certificate-gallery">
+							<h2 id="gallery-title">My Certificates</h2>
+							<div id="certificates-container">
+								<!-- Certificate 1 -->
+								<div class="certificate-card">
+									<div class="certificate-image">
+										<img src="assets/img/certifications/1.jpg" alt="Certificate 1">
+									</div>
+									<div class="certificate-text">
+										<h3>Professional Cloud Security Engineer Certification</h3>
+										<p>This certificate is about demonstrating expertise in safeguarding cloud environments. It validates knowledge and skills in implementing security measures, identifying vulnerabilities, and mitigating risks within cloud infrastructures.</p>
+									</div>
+								</div>
+					
+								<!-- Certificate 2 -->
+								<div class="certificate-card">
+									<div class="certificate-image">
+										<img src="assets/img/certifications/2.jpg" alt="Certificate 2">
+									</div>
+									<div class="certificate-text">
+										<h3>CS50 Python </h3>
+										<p>This certificate demonstrates a solid foundation in Python programming. It validates knowledge of core Python concepts, including data structures, algorithms, and object-oriented programming.</p>
+									</div>
+								</div>
+								<!-- Certificate 2 -->
+								<div class="certificate-card">
+									<div class="certificate-image">
+										<img src="assets/img/certifications/3.jpg" alt="Certificate 2">
+									</div>
+									<div class="certificate-text">
+										<h3>Mastering Generative AI</h3>
+										<p>This certificate demonstrates a deep understanding of generative AI techniques and their applications. It validates expertise in areas such as natural language processing, computer vision, and machine learning, with a focus on creating and utilizing generative models.</p>
+									</div>
+								</div>
+								<!-- Certificate 2 -->
+								<div class="certificate-card">
+									<div class="certificate-image">
+										<img src="assets/img/certifications/4.jpg" alt="Certificate 2">
+									</div>
+									<div class="certificate-text">
+										<h3>Intro to Machine Learning</h3>
+										<p>This certificate demonstrates a foundational understanding of machine learning principles and techniques. It validates knowledge of supervised and unsupervised learning, data preprocessing, model evaluation, and common machine learning algorithms.</p>
+									</div>
+								</div>
+								<!-- Certificate 2 -->
+								<div class="certificate-card">
+									<div class="certificate-image">
+										<img src="assets/img/certifications/5.jpg" alt="Certificate 2">
+									</div>
+									<div class="certificate-text">
+										<h3>The Fundamentals of Digital Marketing</h3>
+										<p>This certificate demonstrates a basic understanding of digital marketing concepts and strategies. It validates knowledge of key digital marketing channels, including search engine optimization (SEO), social media marketing, content marketing, email marketing, and pay-per-click (PPC) advertising.
+
+										</p>
+									</div>
+								</div>
+
+								<!-- Certificate 2 -->
+								<div class="certificate-card">
+									<div class="certificate-image">
+										<img src="assets/img/certifications/6.jpg" alt="Certificate 2">
+									</div>
+									<div class="certificate-text">
+										<h3>Edexcel Certificate Of High Achievement</h3>
+										<p>This certificate was issued by pearson</p>
+									</div>
+								</div>
+
+
+								
+					
+								<!-- Add more certificates in the same structure -->
+					
+							</div>
+						</section>
 						
 					</div>
 					<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 					<div class="tab-pane container fade" id="volunteering">
-						<h1 class="pb-1"><b>coming soon</b></h1>
+						<!-- <h1 class="pb-1"><b>coming soon</b></h1> -->
 
 						<div class="volunteering-container">
 							<div class="volunteering-card" style="background-color: #7A9CC6;">
 								<div class="volunteering-infoCard">
 									<div class="volunteering-infoimage">
 										<div class="volunteering-level volunteering-simpleInfo" style="background-color: #ACC9ED;" >
-											<h3>Level 19</h3>
+											<h3><a href="iub.ac.bd">Level 19</a></h3>
 										</div>
 					
 										<div class="volunteering-img" style="border: 4px solid #ACC9ED;">
-											<img src="https://opendoodles.s3-us-west-1.amazonaws.com/meditating.png" alt="">
+											<a href="https://ieeecsiub.com" target="_blank"><img src="assets/img/volunteering/ieee_logo_black.png" alt=""></a>
 										</div>
 										<div class="volunteering-days volunteering-simpleInfo" style="background-color: #ACC9ED;" >
 											<h3>220,087 Points</h3>
@@ -1638,7 +1707,7 @@
 											<h3>Level 2</h3>
 										</div>
 										<div class="volunteering-img">
-											<img src="https://opendoodles.s3-us-west-1.amazonaws.com/meditating.png" alt="">
+											<a href="https://www.facebook.com/IUBEBC/" target="_blank"><img src="assets/img/volunteering/iubebusinnes.jpg" alt="" style="border-radius: 50%; ;"></a>
 										</div>
 										<div class="volunteering-days volunteering-simpleInfo">
 											<h3>20,017 Points</h3>
@@ -1705,7 +1774,7 @@
 											<h3>Level 3</h3>
 										</div>
 										<div class="volunteering-img" style="border: 4px solid #FFFD98;">
-											<img src="https://opendoodles.s3-us-west-1.amazonaws.com/meditating.png" alt="">
+											<a href="https://www.facebook.com/jukti.cse.iub/" target="_blank"><img src="assets/img/volunteering/jukti.png" alt=""  style="border-radius: 50%; ;"></a>
 										</div>
 										<div class="volunteering-days volunteering-simpleInfo" style="background-color: #FFFD98;" >
 											<h3>1,087 Points</h3>
@@ -1804,18 +1873,29 @@
 					<div class="tab-pane container fade" id="blog">
 						<!-- <h1 class="pb-1"><b>Simple black and white cards with logos</b></h1> -->
 						
-						<h1 class="pb-1"><b>coming soon</b></h1>
+						<h1 class="pb-1"><b>coming soon!<lord-icon
+							src="https://cdn.lordicon.com/vtguzmly.json"
+							trigger="loop"
+							colors="primary:#121331,secondary:#f4f19c,tertiary:#e83a30"
+							style="width:2.5rem;height:2.5rem">
+						</lord-icon></b></h1>
 						
 					</div>
 					<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 					<div class="tab-pane container fade" id="miscellaneous">
-						<h1 class="pb-1"><b>coming soon,</b></h1>
+						<h1 class="pb-1"><b>coming soon!<lord-icon
+							src="https://cdn.lordicon.com/vtguzmly.json"
+							trigger="loop"
+							colors="primary:#121331,secondary:#f4f19c,tertiary:#e83a30"
+							style="width:2.5rem;height:2.5rem">
+						</lord-icon></b></h1>
 						<!-- Maybe add that you were featured in a national newspaper?????? -->
-						<ul>
+						<!-- <ul>
 							<li>aaaa</li>
 							<li>[2015-2019]</li>
-						</ul>
+						</ul> -->
 						<p>
+							Wanna check out my previous site?
 							<lord-icon  src="https://cdn.lordicon.com/qvyppzqz.json" trigger="loop" style="width:2rem;height:2rem"></lord-icon>Go back in time
 							<select id="version-selector" onchange="goToVersion()">
 								<option value="">Select a Version</option>
@@ -1842,7 +1922,7 @@
 </div>
 
 </div>  <!--  content div -->
-<script src="assets/js/loadingScreen.js"></script>
+<!-- <script src="assets/js/loadingScreen.js"></script> -->
 </body>
 
 

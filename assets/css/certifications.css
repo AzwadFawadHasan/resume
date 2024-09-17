@@ -1,0 +1,68 @@
+/* Responsive certificate gallery styles */
+#certificate-gallery {
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+#gallery-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#certificates-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.certificate-card {
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: scale(1.05);
+}
+
+.certificate-image img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.certificate-text {
+    padding: 15px;
+}
+
+.certificate-text h3 {
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.certificate-text p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Mobile responsive adjustments */
+@media only screen and (max-width: 600px) {
+    #gallery-title {
+        font-size: 1.8rem;
+    }
+
+    .certificate-text h3 {
+        font-size: 1.1rem;
+    }
+
+    .certificate-text p {
+        font-size: 0.85rem;
+    }
+}

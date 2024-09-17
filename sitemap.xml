@@ -1,22 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Resume Page -->
+  <url>
+    <loc>https://azwadfawadhasan.github.io/resume</loc>
+    <lastmod>2024-09-16</lastmod>
+    <priority>1.00</priority>
+  </url>
 
+  <!-- About Me Section -->
+  <url>
+    <loc>https://azwadfawadhasan.github.io/resume#bio</loc>
+    <lastmod>2024-09-16</lastmod>
+    <priority>0.80</priority>
+  </url>
 
-<url>
-  <loc>https://azwadfawadhasan.github.io/resume/</loc>
-  <lastmod>2024-08-24T19:38:12+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://azwadfawadhasan.github.io/resume/assets/cv/Azwad_Fawad_Hasan_CV_two_page.pdf</loc>
-  <lastmod>2024-08-24T19:38:12+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
+  <!-- Education Section -->
+  <url>
+    <loc>https://azwadfawadhasan.github.io/resume#education</loc>
+    <lastmod>2024-09-16</lastmod>
+    <priority>0.80</priority>
+  </url>
 
+  <!-- Job Experience Section -->
+  <url>
+    <loc>https://azwadfawadhasan.github.io/resume#job_experience</loc>
+    <lastmod>2024-09-16</lastmod>
+    <priority>0.80</priority>
+  </url>
 
+  <!-- Publications Section -->
+  <url>
+    <loc>https://azwadfawadhasan.github.io/resume#tabs-publications</loc>
+    <lastmod>2024-09-16</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Coding Projects Section -->
+  <url>
+    <loc>https://azwadfawadhasan.github.io/resume#coding_projects</loc>
+    <lastmod>2024-09-16</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Achievements Section -->
+  <url>
+    <loc>https://azwadfawadhasan.github.io/resume#achievements</loc>
+    <lastmod>2024-09-16</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Research Interests Section -->
+  <url>
+    <loc>https://azwadfawadhasan.github.io/resume#research_interests</loc>
+    <lastmod>2024-09-16</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Volunteering Section -->
+  <url>
+    <loc>https://azwadfawadhasan.github.io/resume#volunteering</loc>
+    <lastmod>2024-09-16</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Tech Stack Section -->
+  <url>
+    <loc>https://azwadfawadhasan.github.io/resume#tech_stack</loc>
+    <lastmod>2024-09-16</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Certifications Section -->
+  <url>
+    <loc>https://azwadfawadhasan.github.io/resume#certifications</loc>
+    <lastmod>2024-09-16</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Blog Section -->
+  <url>
+    <loc>https://azwadfawadhasan.github.io/resume#blog</loc>
+    <lastmod>2024-09-16</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Miscellaneous Section -->
+  <url>
+    <loc>https://azwadfawadhasan.github.io/resume#miscellaneous</loc>
+    <lastmod>2024-09-16</lastmod>
+    <priority>0.60</priority>
+  </url>
 </urlset>

@@ -349,6 +349,11 @@
         background-color: #424242;
         transition: width 0.2s ease;
       }
+
+      .pubcard-purple .pubcard-bar,
+      .pubcard-purple .pubcard-tagbox button {
+        background-color: purple;
+      }
       
       .pubcard-blue .pubcard-bar,
       .pubcard-blue .pubcard-tagbox button {

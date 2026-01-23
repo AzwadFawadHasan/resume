@@ -25,6 +25,7 @@ window.addEventListener('load', function() {
         const tech_stackIcon = document.getElementById('tech_stack-icon');
         const certIcon = document.getElementById('cert-icon');
         const blogIcon = document.getElementById('blog-icon');
+        const servicesIcon = document.getElementById('services-icon');
         const miscIcon = document.getElementById('misc-icon');
         
         
@@ -75,6 +76,10 @@ window.addEventListener('load', function() {
         blogIcon.removeAttribute('state');
 
         // Remove the delay and state attributes
+        servicesIcon.removeAttribute('delay');
+        servicesIcon.removeAttribute('state');
+
+        // Remove the delay and state attributes
         miscIcon.removeAttribute('delay');
         miscIcon.removeAttribute('state');
 
@@ -91,6 +96,7 @@ window.addEventListener('load', function() {
         tech_stackIcon.setAttribute('trigger', 'boomerang');
         certIcon.setAttribute('trigger', 'boomerang');
         blogIcon.setAttribute('trigger', 'boomerang');
+        servicesIcon.setAttribute('trigger', 'boomerang');
         miscIcon.setAttribute('trigger', 'boomerang');
     }, 4300); // 1000ms = 1 second
 });
@@ -113,6 +119,7 @@ const volunteeringLink = document.getElementById('volunteering-link');
 const tech_stackLink = document.getElementById('tech_stack-link');
 const certLink = document.getElementById('cert-link');
 const blogLink = document.getElementById('blog-link');
+const servicesLink = document.getElementById('services-link');
 const miscLink = document.getElementById('misc-link');
 
 const aboutIcon = document.getElementById('about-icon');
@@ -126,6 +133,7 @@ const volunteeringIcon = document.getElementById('volunteering-icon');
 const tech_stackIcon = document.getElementById('tech_stack-icon');
 const certIcon = document.getElementById('cert-icon');
 const blogIcon = document.getElementById('blog-icon');
+const servicesIcon = document.getElementById('services-icon');
 const miscIcon = document.getElementById('misc-icon');
 
 // Listen for a click event on the nav item
@@ -261,6 +269,16 @@ blogLink.addEventListener('click', function() {
     // Wait for 1 second, then change the trigger to "boomerang"
     setTimeout(function() {
         blogIcon.setAttribute('trigger', 'boomerang');
+        }, 1000); // 1 second delay
+    });
+
+
+servicesLink.addEventListener('click', function() {
+    // Change the trigger to "loop" when clicked
+    servicesIcon.setAttribute('trigger', 'loop');
+    // Wait for 1 second, then change the trigger to "boomerang"
+    setTimeout(function() {
+        servicesIcon.setAttribute('trigger', 'boomerang');
         }, 1000); // 1 second delay
     });
     

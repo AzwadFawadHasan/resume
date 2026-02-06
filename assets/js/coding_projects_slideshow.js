@@ -137,6 +137,13 @@ const slideshows = {
         "assets/img/projects/omniMRZ/omni_mrz_logo_compressed.jpg",
         "assets/img/projects/omniMRZ/omni_mrz_code_compressed.jpg",
     ],
+    slideshowimg19: [
+
+        "assets/img/projects/screenshotScanner/ScreenshotScanner_compressed.png",
+        ""
+
+
+    ],
     slideshowimgA1: [
         "assets/img/acheivements/bdInnovationConclave/1.jpg",
         "assets/img/acheivements/bdInnovationConclave/2.jpg",
@@ -217,6 +224,7 @@ const currentIndex = {
     slideshowimg16: 0,
     slideshowimg17: 0,
     slideshowimg18: 0,
+    slideshowimg19: 0,
     slideshowimgA1: 0,
     slideshowimgV1: 0,
     slideshowimg_aamra_erp: 0,
@@ -255,6 +263,7 @@ setInterval(() => updateSlideshow("slideshowimg15"), 3000);  // Change image eve
 setInterval(() => updateSlideshow("slideshowimg16"), 2500);  // Change image every 5 seconds for img 3
 setInterval(() => updateSlideshow("slideshowimg17"), 2500);  // Change image every 5 seconds for img 3
 setInterval(() => updateSlideshow("slideshowimg18"), 2500);  // Change image every 5 seconds for img 3
+setInterval(() => updateSlideshow("slideshowimg19"), 2500);  // Change image every 5 seconds for img 3
 setInterval(() => updateSlideshow("slideshowimgA1"), 3000);  // Change image every 5 seconds for img 3
 setInterval(() => updateSlideshow("slideshowimgV1"), 3000);  // Change image every 5 seconds for img 3
 setInterval(() => updateSlideshow("slideshowimg_aamra_erp"), 3000);  // Change image every 5 seconds for img 3

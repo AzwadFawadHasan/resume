@@ -45,7 +45,7 @@ const slideshows = {
         "assets/img/projects/AirQualityIndex_dbmsProject/first.jpg",
         "assets/img/projects/AirQualityIndex_dbmsProject/second.jpg",
         "assets/img/projects/AirQualityIndex_dbmsProject/third.jpg",
-  
+
     ],
     slideshowimg6: [
         "assets/img/projects/Maze_SolverBot_ArduinoProject/1.png",
@@ -80,7 +80,7 @@ const slideshows = {
 
     ],
     slideshowimg10: [
-            "assets/img/projects/ekiPath/1.jpg",
+        "assets/img/projects/ekiPath/1.jpg",
 
 
     ],
@@ -129,14 +129,19 @@ const slideshows = {
 
     ],
     slideshowimg17: [
-        
+
         "assets/img/projects/sdnMultiController/multicontrollersdn_1_1_50.jpg",
+    ],
+    slideshowimg18: [
+
+        "assets/img/projects/omniMRZ/omni_mrz_logo_compressed.jpg",
+        "assets/img/projects/omniMRZ/omni_mrz_code_compressed.jpg",
     ],
     slideshowimgA1: [
         "assets/img/acheivements/bdInnovationConclave/1.jpg",
         "assets/img/acheivements/bdInnovationConclave/2.jpg",
         "assets/img/acheivements/bdInnovationConclave/3.jpg",
-  
+
 
 
     ],
@@ -145,38 +150,38 @@ const slideshows = {
         "assets/img/volunteering/2.png",
         "assets/img/volunteering/3.png",
         "assets/img/volunteering/4.png",
-  
+
 
 
     ],
-    
+
     slideshowimg_aamra_erp: [
         "assets/img/projects/aamra_erp/1.jpg",
         "assets/img/projects/aamra_erp/2.jpg",
         "assets/img/projects/aamra_erp/3.jpg",
         "assets/img/projects/aamra_erp/4.jpg",
         "assets/img/projects/aamra_erp/5.jpg",
-        
+
         "assets/img/projects/aamra_erp/6.jpg",
         "assets/img/projects/aamra_erp/7.jpg",
-  
+
 
 
 
     ],
-    
+
 
     slideshowimg_calculatorApp_flutter_project_2: [
         "assets/img/projects/calculatorApp_flutter_project_2/1.jpg",
         "assets/img/projects/calculatorApp_flutter_project_2/2.jpg",
         "assets/img/projects/calculatorApp_flutter_project_2/3.jpg",
-      
+
     ],
     slideshowimg_plan_it: [
         "assets/img/projects/planIT_UI_UX_flutter_project/1.jpg",
         "assets/img/projects/planIT_UI_UX_flutter_project/2.jpg",
-  
-      
+
+
     ],
     slideshowimg_devOpsProject: [
         "assets/img/projects/DevOpsProject_beeHome/1.jpg",
@@ -184,8 +189,8 @@ const slideshows = {
         "assets/img/projects/DevOpsProject_beeHome/3.jpg",
         "assets/img/projects/DevOpsProject_beeHome/4.jpg",
         "assets/img/projects/DevOpsProject_beeHome/5.jpg",
-  
-      
+
+
     ]
 
 
@@ -211,6 +216,7 @@ const currentIndex = {
     slideshowimg15: 0,
     slideshowimg16: 0,
     slideshowimg17: 0,
+    slideshowimg18: 0,
     slideshowimgA1: 0,
     slideshowimgV1: 0,
     slideshowimg_aamra_erp: 0,
@@ -248,6 +254,7 @@ setInterval(() => updateSlideshow("slideshowimg14"), 2500);  // Change image eve
 setInterval(() => updateSlideshow("slideshowimg15"), 3000);  // Change image every 5 seconds for img 3
 setInterval(() => updateSlideshow("slideshowimg16"), 2500);  // Change image every 5 seconds for img 3
 setInterval(() => updateSlideshow("slideshowimg17"), 2500);  // Change image every 5 seconds for img 3
+setInterval(() => updateSlideshow("slideshowimg18"), 2500);  // Change image every 5 seconds for img 3
 setInterval(() => updateSlideshow("slideshowimgA1"), 3000);  // Change image every 5 seconds for img 3
 setInterval(() => updateSlideshow("slideshowimgV1"), 3000);  // Change image every 5 seconds for img 3
 setInterval(() => updateSlideshow("slideshowimg_aamra_erp"), 3000);  // Change image every 5 seconds for img 3

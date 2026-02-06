@@ -518,3 +518,47 @@ body {
       text-align: center; /* Center text inside the span */
   }
 }
+
+/* Mobile Responsiveness Improvements */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.75rem !important;
+    }
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    h3 {
+        font-size: 1.3rem !important;
+    }
+    
+    /* Better container usage on small screens */
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Scrollable tabs for mobile */
+    .nav-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        border-bottom: 2px solid #dee2e6;
+        padding-bottom: 5px;
+    }
+    
+    .nav-tabs .nav-link {
+        white-space: nowrap;
+        font-size: 0.9rem;
+        padding: 0.5rem 0.8rem;
+        margin-bottom: 0;
+    }
+
+    /* Adjust profile picture size on mobile */
+    #profile_picture img {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        display: block;
+    }
+}

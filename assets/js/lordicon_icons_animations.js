@@ -22,9 +22,10 @@ window.addEventListener('load', function () {
         return item.link && item.icon;
     });
 
-    let navPulsePlayed = false;
+    let firstNavPulsePlayed = false;
+    let secondNavPulsePlayed = false;
     let navPulseTimeoutId = null;
-    let userHasInteracted = false;
+    let secondNavPulseTimeoutId = null;
 
     function setBoomerangMode() {
         navItems.forEach(function (item) {
@@ -46,32 +47,57 @@ window.addEventListener('load', function () {
         }, duration || 900);
     }
 
-    function playIdleNavPulse() {
-        if (navPulsePlayed) {
+    function isAboutTabActive() {
+        const activeLink = document.querySelector('#nav-tab-id .nav-link.active');
+        return activeLink && activeLink.id === 'about-link';
+    }
+
+    function getInactiveNavItems() {
+        return navItems.filter(function (item) {
+            return !item.link.classList.contains('active');
+        });
+    }
+
+    function playIdleNavPulse(runMode) {
+        const isFirstRun = runMode === 'first';
+
+        if ((isFirstRun && firstNavPulsePlayed) || (!isFirstRun && secondNavPulsePlayed)) {
             return;
         }
 
-        navPulsePlayed = true;
+        if (!isAboutTabActive()) {
+            return;
+        }
 
-        navItems.forEach(function (item, index) {
+        if (isFirstRun) {
+            firstNavPulsePlayed = true;
+        } else {
+            secondNavPulsePlayed = true;
+        }
+
+        const inactiveItems = getInactiveNavItems();
+        const stepDelay = isFirstRun ? 155 : 180;
+        const iconDuration = isFirstRun ? 1050 : 1150;
+        const classDuration = isFirstRun ? 1200 : 1300;
+
+        inactiveItems.forEach(function (item, index) {
             window.setTimeout(function () {
                 item.icon.classList.add('nav-icon-attention');
-                animateIcon(item.icon, 950);
+                animateIcon(item.icon, iconDuration);
 
                 window.setTimeout(function () {
                     item.icon.classList.remove('nav-icon-attention');
-                }, 1050);
-            }, index * 120);
+                }, classDuration);
+            }, index * stepDelay);
         });
     }
 
     function markInteraction() {
-        userHasInteracted = true;
-
         if (navPulseTimeoutId) {
             window.clearTimeout(navPulseTimeoutId);
             navPulseTimeoutId = null;
         }
+
     }
 
     window.setTimeout(function () {
@@ -87,10 +113,14 @@ window.addEventListener('load', function () {
     }, 4300);
 
     navPulseTimeoutId = window.setTimeout(function () {
-        if (!userHasInteracted) {
-            playIdleNavPulse();
-        }
+        playIdleNavPulse('first');
     }, 8000);
+
+    secondNavPulseTimeoutId = window.setTimeout(function () {
+        if (isAboutTabActive()) {
+            playIdleNavPulse('second');
+        }
+    }, 28000);
 
     navItems.forEach(function (item) {
         item.link.addEventListener('mouseenter', function () {

@@ -140,7 +140,7 @@ const slideshows = {
     slideshowimg19: [
 
         "assets/img/projects/screenshotScanner/ScreenshotScanner_compressed.png",
-        ""
+        
 
 
     ],

@@ -190,6 +190,40 @@ body {
   animation-iteration-count: 1;
 }
 
+.nav-tabs .nav-link lord-icon {
+  transition: transform 0.35s ease, filter 0.35s ease;
+  transform-origin: center;
+}
+
+.nav-tabs .nav-link:hover lord-icon,
+.nav-tabs .nav-link:focus lord-icon {
+  transform: translateY(-1px) scale(1.08);
+  filter: drop-shadow(0 4px 10px rgba(8, 124, 252, 0.18));
+}
+
+@keyframes nav-icon-attention {
+  0% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 0 rgba(8, 124, 252, 0));
+  }
+  35% {
+    transform: translateY(-4px) scale(1.15) rotate(-4deg);
+    filter: drop-shadow(0 8px 16px rgba(8, 124, 252, 0.22));
+  }
+  65% {
+    transform: translateY(1px) scale(1.06) rotate(3deg);
+    filter: drop-shadow(0 5px 12px rgba(8, 124, 252, 0.16));
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 0 rgba(8, 124, 252, 0));
+  }
+}
+
+.nav-tabs .nav-link lord-icon.nav-icon-attention {
+  animation: nav-icon-attention 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 
 
 /* Underline From Center */

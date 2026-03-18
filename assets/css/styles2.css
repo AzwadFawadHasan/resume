@@ -163,6 +163,45 @@ body {
 .email-address {
     display: inline-block;
   }
+
+.copy-email {
+    position: relative;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+.copy-email:hover,
+.copy-email:focus {
+    color: #007bff;
+    outline: none;
+  }
+
+.copy-email::after {
+    content: attr(data-copy-state);
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 0.75rem);
+    transform: translateY(-50%);
+    padding: 0.2rem 0.45rem;
+    border-radius: 999px;
+    background: #14213d;
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+
+.copy-email.copy-success::after,
+.copy-email.copy-failed::after {
+    opacity: 1;
+  }
+
+.copy-email.copy-failed::after {
+    background: #a61e4d;
+  }
   
   .email-address b, .email-address .secondary-email {
     display: inline;
@@ -178,6 +217,13 @@ body {
     .email-address b {
       display: block;
     }
+
+    .copy-email::after {
+      top: calc(100% + 0.35rem);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     .email-address .secondary-email {
       display: block;
       margin-top: 5px; /* add some space between the two email addresses */

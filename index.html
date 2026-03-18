@@ -214,21 +214,84 @@
 						</span>
 
 						<samp class="email-address" id="sampid">
-							<b>azwadfawadhasan@gmail.com</b>
-							<span class="secondary-email">2020222@iub.edu.bd</span>
+							<b id="primary-email" class="copy-email" role="button" tabindex="0"
+								aria-label="Copy email address">azwadfawadhasan@gmail.com</b>
+							<!-- <span class="secondary-email">2020222@iub.edu.bd</span> -->
 						</samp>
 						<br>
 						<span id="typed-output"></span>
 						<script>
-							var typed = new Typed('#typed-output', {
-								strings: ["Hello, I'm Azwad.", "Welcome to my portfolio!", "If you'd like to connect or collaborate,", "Contact me by email or on socials."],
-								typeSpeed: 50, // Typing speed in milliseconds
-								backSpeed: 30, // Backspacing speed in milliseconds
-								loop: true, // Loop the typing animation
-								showCursor: true, // Show the blinking cursor
-								cursorChar: '|', // Character for the cursor
-								startDelay: 500, // Delay before typing starts
-								backDelay: 1000, // Delay before backspacing
+							(function () {
+								var emailButton = document.getElementById('primary-email');
+								var emailAddress = 'azwadfawadhasan@gmail.com';
+
+								function showCopyState(message, isSuccess) {
+									emailButton.setAttribute('data-copy-state', message);
+									emailButton.classList.toggle('copy-success', isSuccess);
+									emailButton.classList.toggle('copy-failed', !isSuccess);
+
+									window.clearTimeout(emailButton._copyStateTimer);
+									emailButton._copyStateTimer = window.setTimeout(function () {
+										emailButton.removeAttribute('data-copy-state');
+										emailButton.classList.remove('copy-success', 'copy-failed');
+									}, 1800);
+								}
+
+								function fallbackCopyText(text) {
+									var textArea = document.createElement('textarea');
+									textArea.value = text;
+									textArea.setAttribute('readonly', '');
+									textArea.style.position = 'absolute';
+									textArea.style.left = '-9999px';
+									document.body.appendChild(textArea);
+									textArea.select();
+
+									var copied = document.execCommand('copy');
+									document.body.removeChild(textArea);
+									return copied;
+								}
+
+								function copyEmail() {
+									if (navigator.clipboard && navigator.clipboard.writeText) {
+										navigator.clipboard.writeText(emailAddress)
+											.then(function () {
+												showCopyState('Copied', true);
+											})
+											.catch(function () {
+												var copied = fallbackCopyText(emailAddress);
+												showCopyState(copied ? 'Copied' : 'Copy failed', copied);
+											});
+										return;
+									}
+
+									var copied = fallbackCopyText(emailAddress);
+									showCopyState(copied ? 'Copied' : 'Copy failed', copied);
+								}
+
+								emailButton.addEventListener('click', copyEmail);
+								emailButton.addEventListener('keydown', function (event) {
+									if (event.key === 'Enter' || event.key === ' ') {
+										event.preventDefault();
+										copyEmail();
+									}
+								});
+							})();
+
+							window.addEventListener('load', function () {
+								if (!window.Typed) {
+									return;
+								}
+
+								new Typed('#typed-output', {
+									strings: ["Hello, I'm Azwad.", "Welcome to my portfolio!", "If you'd like to connect or collaborate,", "Contact me by email or on socials."],
+									typeSpeed: 50,
+									backSpeed: 30,
+									loop: true,
+									showCursor: true,
+									cursorChar: '|',
+									startDelay: 500,
+									backDelay: 1000
+								});
 							});
 						</script>
 						<br>

@@ -55,6 +55,79 @@ body {
     font-size: 2rem; /* Ensure CV icon matches the size of others */
 }
 
+.cv-button-wrap {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    margin: 0 8px;
+}
+
+.cv-button-highlight {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.cv-scribble-ring {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 3.05rem;
+    height: 7.7rem;
+    pointer-events: none;
+    z-index: 1;
+    overflow: visible;
+    transform: translate(-64%, -51%) rotate(-12deg);
+}
+
+.cv-scribble-ring path {
+    fill: none;
+    stroke: #111111;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.cv-scribble-ring path:first-child {
+    stroke-width: 2.6;
+    stroke-dasharray: 205;
+    stroke-dashoffset: 205;
+    animation: cv-scribble-draw 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+
+.cv-scribble-ring path:last-child {
+    stroke-width: 2.1;
+    opacity: 0.82;
+    stroke-dasharray: 110;
+    stroke-dashoffset: 110;
+    animation: cv-scribble-draw 0.72s ease-out 1.22s forwards;
+}
+
+.cv-button-wrap:hover .cv-scribble-ring path:first-child,
+.cv-button-wrap:focus-within .cv-scribble-ring path:first-child {
+    animation: cv-scribble-draw 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.cv-button-wrap:hover .cv-scribble-ring path:last-child,
+.cv-button-wrap:focus-within .cv-scribble-ring path:last-child {
+    animation: cv-scribble-draw 0.6s ease-out 0.14s forwards;
+}
+
+@keyframes cv-scribble-draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
 
 
 @media (max-width: 1000px) {
@@ -72,11 +145,62 @@ body {
         font-size: 1.5rem;
         margin: 0 5px;
     }
+
+    .cv-button-wrap {
+        width: 1.9rem;
+        height: 1.9rem;
+        margin: 0 5px;
+    }
+
+    .cv-scribble-ring {
+        width: 2.7rem;
+        height: 2.35rem;
+        transform: translate(-50%, -51%) rotate(-6deg);
+    }
 }
 
 
 .email-address {
     display: inline-block;
+  }
+
+.copy-email {
+    position: relative;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+.copy-email:hover,
+.copy-email:focus {
+    color: #007bff;
+    outline: none;
+  }
+
+.copy-email::after {
+    content: attr(data-copy-state);
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 0.75rem);
+    transform: translateY(-50%);
+    padding: 0.2rem 0.45rem;
+    border-radius: 999px;
+    background: #14213d;
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+
+.copy-email.copy-success::after,
+.copy-email.copy-failed::after {
+    opacity: 1;
+  }
+
+.copy-email.copy-failed::after {
+    background: #a61e4d;
   }
   
   .email-address b, .email-address .secondary-email {
@@ -93,6 +217,13 @@ body {
     .email-address b {
       display: block;
     }
+
+    .copy-email::after {
+      top: calc(100% + 0.35rem);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     .email-address .secondary-email {
       display: block;
       margin-top: 5px; /* add some space between the two email addresses */
@@ -188,6 +319,40 @@ body {
   animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
+}
+
+.nav-tabs .nav-link lord-icon {
+  transition: transform 0.35s ease, filter 0.35s ease;
+  transform-origin: center;
+}
+
+.nav-tabs .nav-link:hover lord-icon,
+.nav-tabs .nav-link:focus lord-icon {
+  transform: translateY(-1px) scale(1.08);
+  filter: drop-shadow(0 4px 10px rgba(8, 124, 252, 0.18));
+}
+
+@keyframes nav-icon-attention {
+  0% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 0 rgba(8, 124, 252, 0));
+  }
+  35% {
+    transform: translateY(-4px) scale(1.15) rotate(-4deg);
+    filter: drop-shadow(0 8px 16px rgba(8, 124, 252, 0.22));
+  }
+  65% {
+    transform: translateY(1px) scale(1.06) rotate(3deg);
+    filter: drop-shadow(0 5px 12px rgba(8, 124, 252, 0.16));
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 0 rgba(8, 124, 252, 0));
+  }
+}
+
+.nav-tabs .nav-link lord-icon.nav-icon-attention {
+  animation: nav-icon-attention 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 

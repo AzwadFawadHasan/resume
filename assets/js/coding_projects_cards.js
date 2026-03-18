@@ -1,16 +1,18 @@
-$(document).ready(function() {
-  console.log("document is ready");
+window.addEventListener('load', function () {
+  if (!window.jQuery) {
+    return;
+  }
 
-  $(".coding-card").hover(
-    function() {
+  $('.coding-card').hover(
+    function () {
       $(this).addClass('shadow-lg').css('cursor', 'pointer');
-    }, function() {
+    },
+    function () {
       $(this).removeClass('shadow-lg');
     }
   );
-});
-$(document).ready(function() {
-  $(".coding-card").on('click', function() {
+
+  $('.coding-card').on('click', function () {
     $('html, body').animate({
       scrollTop: $(this).offset().top
     }, 500);

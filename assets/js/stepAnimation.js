@@ -6,20 +6,24 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 
-  gsap.registerPlugin(ScrollTrigger);
+  if (window.gsap && window.ScrollTrigger) {
+    gsap.registerPlugin(ScrollTrigger);
 
-  let horizontalSectionCoding = document.querySelector('.horizontal-coding');
-  
-  gsap.to('.horizontal-coding', {
-    x: () => horizontalSectionCoding.scrollWidth * -1,
-    xPercent: 100,
-    scrollTrigger: {
-      trigger: '.horizontal-coding',
-      start: 'center center',
-      end: '+=2000px',
-      pin: '#horizontal-scroll-coding',
-      scrub: true,
-      invalidateOnRefresh: true
+    let horizontalSectionCoding = document.querySelector('.horizontal-coding');
+
+    if (horizontalSectionCoding) {
+      gsap.to('.horizontal-coding', {
+        x: () => horizontalSectionCoding.scrollWidth * -1,
+        xPercent: 100,
+        scrollTrigger: {
+          trigger: '.horizontal-coding',
+          start: 'center center',
+          end: '+=2000px',
+          pin: '#horizontal-scroll-coding',
+          scrub: true,
+          invalidateOnRefresh: true
+        }
+      });
     }
-  });
+  }
   

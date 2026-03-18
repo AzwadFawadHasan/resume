@@ -29,7 +29,7 @@ const slideshows = {
         "assets/img/projects/Simulating_Operations_Of_A_Reconditioned_Car_Importer_Such_Like_Haq-s_Bay/a8.jpg",
         "assets/img/projects/Simulating_Operations_Of_A_Reconditioned_Car_Importer_Such_Like_Haq-s_Bay/first.jpg",
         "assets/img/projects/Simulating_Operations_Of_A_Reconditioned_Car_Importer_Such_Like_Haq-s_Bay/second.jpg",
-        "assets/img/projects/Simulating_Operations_Of_A_Reconditioned_Car_Importer_Such_Like_Haq-s_Bay/thirds.jpg",
+        "assets/img/projects/Simulating_Operations_Of_A_Reconditioned_Car_Importer_Such_Like_Haq-s_Bay/thrirds.jpg",
     ],
 
     slideshowimg5: [

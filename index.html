@@ -343,7 +343,18 @@
 					}
 
 					navLinks.removeClass('active');
-					navLinks.filter('[href="' + target + '"]').addClass('active');
+					var activeLink = navLinks.filter('[href="' + target + '"]').addClass('active');
+
+					if (window.innerWidth <= 576 && activeLink.length) {
+						var navList = document.getElementById('nav-tab-id');
+						var activeElement = activeLink.get(0);
+						var targetScrollLeft = activeElement.offsetLeft - ((navList.clientWidth - activeElement.clientWidth) / 2);
+
+						navList.scrollTo({
+							left: Math.max(0, targetScrollLeft),
+							behavior: 'smooth'
+						});
+					}
 				}
 
 				function emitSectionChange(target) {

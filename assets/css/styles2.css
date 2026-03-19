@@ -44,6 +44,7 @@ body {
 
 body.continuous-layout .tab-content {
     width: 100%;
+    padding-bottom: 35vh;
 }
 
 body.continuous-layout .tab-pane {

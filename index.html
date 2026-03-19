@@ -323,6 +323,7 @@
 				document.body.classList.add('continuous-layout');
 
 				var navLinks = $('#nav-tab-id .nav-link[data-toggle="tab"]');
+				var tabContent = document.querySelector('.tab-content');
 				var sectionIds = navLinks.map(function () {
 					return $(this).attr('href');
 				}).get();
@@ -331,6 +332,10 @@
 				}).filter(Boolean);
 				var currentSection = null;
 				var ticking = false;
+
+				sections.forEach(function (section) {
+					tabContent.appendChild(section);
+				});
 
 				function setActiveNav(target) {
 					if (!target) {

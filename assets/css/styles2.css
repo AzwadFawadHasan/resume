@@ -42,6 +42,44 @@ body {
     color: #555555;
 }
 
+body.continuous-layout .tab-content {
+    width: 100%;
+    padding-bottom: 35vh;
+}
+
+body.continuous-layout .tab-pane {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+body.continuous-layout .tab-pane.fade {
+    transition: none;
+}
+
+body.continuous-layout .tab-pane + .tab-pane {
+    margin-top: 1.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #dee2e6;
+}
+
+body.continuous-layout .tab-pane h1,
+body.continuous-layout .tab-pane h2 {
+    scroll-margin-top: 120px;
+}
+
+body.continuous-layout .sticky-tab-row {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: rgba(245, 245, 245, 0.96);
+    backdrop-filter: blur(10px);
+    margin-bottom: 0.75rem;
+}
+
+body.continuous-layout #nav-tab-id {
+    padding-top: 0.35rem;
+}
+
 .ai-google-scholar-square, .ai-dblp-square, .ai-researchgate-square, .fa-linkedin, .ai-cv-square {
     font-size: 2rem; /* Adjust this value to make the icons larger */
 }
@@ -616,24 +654,29 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    min-height: 2rem;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+    margin-top: 0.45rem;
   }
   #sampid{
-    /* margin-bottom: 1rem; */
-    margin-bottom: 1rem;
-    margin-top: 0.5rem;
+    margin-bottom: 0.45rem;
+    margin-top: 0.2rem;
   }
 
   .fading-text {
     position: absolute; /* Stack the texts on top of each other */
-    opacity: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0 !important;
     transition: opacity 1s ease-in-out;
     white-space: nowrap; /* Prevents line breaks */
+    max-width: 100%;
   }
 
   .fading-text.show {
-    opacity: 1;
+    opacity: 1 !important;
   }
 }
 
@@ -739,6 +782,15 @@ body {
         font-size: 0.9rem;
         padding: 0.5rem 0.8rem;
         margin-bottom: 0;
+    }
+
+    body.continuous-layout .sticky-tab-row {
+        top: 0.45rem;
+        padding-top: 0.1rem;
+    }
+
+    body.continuous-layout #nav-tab-id {
+        padding-top: 0;
     }
 
     /* Adjust profile picture size on mobile */

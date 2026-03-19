@@ -320,31 +320,115 @@
 		</div>
 		<script>
 			$(document).ready(function () {
-				// When a nav link is clicked
-				$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-					var target = $(e.target).attr("href"); // Get the target of the tab
+				document.body.classList.add('continuous-layout');
 
-					$('.tab-pane').each(function () {
-						if ('#' + this.id === target) {
-							this.classList.add('active', 'show');
-						} else {
-							this.classList.remove('active', 'show');
+				var navLinks = $('#nav-tab-id .nav-link[data-toggle="tab"]');
+				var tabContent = document.querySelector('.tab-content');
+				var sectionIds = navLinks.map(function () {
+					return $(this).attr('href');
+				}).get();
+				var sections = sectionIds.map(function (selector) {
+					return document.querySelector(selector);
+				}).filter(Boolean);
+				var currentSection = null;
+				var ticking = false;
+
+				sections.forEach(function (section) {
+					tabContent.appendChild(section);
+				});
+
+				function setActiveNav(target) {
+					if (!target) {
+						return;
+					}
+
+					navLinks.removeClass('active');
+					var activeLink = navLinks.filter('[href="' + target + '"]').addClass('active');
+
+					if (window.innerWidth <= 576 && activeLink.length) {
+						var navList = document.getElementById('nav-tab-id');
+						var activeElement = activeLink.get(0);
+						var targetScrollLeft = activeElement.offsetLeft - ((navList.clientWidth - activeElement.clientWidth) / 2);
+
+						navList.scrollTo({
+							left: Math.max(0, targetScrollLeft),
+							behavior: 'smooth'
+						});
+					}
+				}
+
+				function emitSectionChange(target) {
+					document.dispatchEvent(new CustomEvent('sectionchange', {
+						detail: { sectionId: target }
+					}));
+				}
+
+				function updateActiveSection() {
+					var offset = window.innerWidth <= 576 ? 140 : 190;
+					var nextSection = '#bio';
+
+					sections.forEach(function (section) {
+						if (section.getBoundingClientRect().top - offset <= 0) {
+							nextSection = '#' + section.id;
 						}
 					});
 
-					window.history.pushState(null, null, target); // Change the URL without reloading the page
+					if (nextSection !== currentSection) {
+						currentSection = nextSection;
+						setActiveNav(nextSection);
+						window.history.replaceState(null, null, nextSection);
+						emitSectionChange(nextSection);
+					}
+
+					ticking = false;
+				}
+
+				function requestSectionSync() {
+					if (!ticking) {
+						window.requestAnimationFrame(updateActiveSection);
+						ticking = true;
+					}
+				}
+
+				navLinks.on('click', function (e) {
+					var target = $(this).attr('href');
+					var section = document.querySelector(target);
+
+					if (!section) {
+						return;
+					}
+
+					e.preventDefault();
+					setActiveNav(target);
+					currentSection = target;
+					window.history.pushState(null, null, target);
+					emitSectionChange(target);
+					section.scrollIntoView({ behavior: 'smooth', block: 'start' });
 				});
 
-				// When page is loaded or refreshed, open the correct tab if the URL has a fragment
+				window.addEventListener('scroll', requestSectionSync, { passive: true });
+				window.addEventListener('resize', requestSectionSync);
+
 				var hash = window.location.hash;
-				if (hash) {
-					$('.nav-link[href="' + hash + '"]').tab('show'); // Show the tab corresponding to the URL fragment
+				if (hash && document.querySelector(hash)) {
+					setActiveNav(hash);
+					currentSection = hash;
+					emitSectionChange(hash);
+					window.setTimeout(function () {
+						document.querySelector(hash).scrollIntoView({ behavior: 'auto', block: 'start' });
+						requestSectionSync();
+					}, 60);
+				} else {
+					setActiveNav('#bio');
+					currentSection = '#bio';
+					emitSectionChange('#bio');
+					requestSectionSync();
 				}
 			});
 		</script>
 
 
-		<div class="row pb-3">
+		<div class="row pb-3 sticky-tab-row">
 			<ul class="nav nav-tabs" id="nav-tab-id">
 				<li class="nav-item">
 					<a class="nav-link active" data-toggle="tab" href="#bio" data-target="#bio" id="about-link">
@@ -2531,10 +2615,8 @@
 
 	</div> <!--  content div -->
 	<!-- <script src="assets/js/loadingScreen.js"></script> -->
-</body>
 
-
-<footer class="text-center text-lg-start bg-light text-muted"><span>
+	<footer class="text-center text-lg-start bg-light text-muted"><span>
 		<script>
 			document.addEventListener('DOMContentLoaded', () => {
 				const lastUpdatedElement = document.getElementById('last-updated');
@@ -2551,5 +2633,8 @@
 
 		</script>
 		<p id="last-updated">Last updated: </p>
+	</footer>
+
+</body>
 
 </html>

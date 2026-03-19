@@ -26,12 +26,21 @@ window.addEventListener('load', function () {
     let secondNavPulsePlayed = false;
     let navPulseTimeoutId = null;
     let secondNavPulseTimeoutId = null;
+    let lastAnimatedSection = null;
+
+    function prepareIcon(icon) {
+        if (!icon) {
+            return;
+        }
+
+        icon.removeAttribute('delay');
+        icon.removeAttribute('state');
+        icon.setAttribute('trigger', 'boomerang');
+    }
 
     function setBoomerangMode() {
         navItems.forEach(function (item) {
-            item.icon.removeAttribute('delay');
-            item.icon.removeAttribute('state');
-            item.icon.setAttribute('trigger', 'boomerang');
+            prepareIcon(item.icon);
         });
     }
 
@@ -40,6 +49,7 @@ window.addEventListener('load', function () {
             return;
         }
 
+        prepareIcon(icon);
         icon.setAttribute('trigger', 'loop');
 
         window.setTimeout(function () {
@@ -137,6 +147,20 @@ window.addEventListener('load', function () {
             markInteraction();
             animateIcon(item.icon, 1000);
         });
+    });
+
+    document.addEventListener('sectionchange', function (event) {
+        const targetSection = event.detail && event.detail.sectionId;
+        const matchedItem = navItems.find(function (item) {
+            return item.link.getAttribute('href') === targetSection;
+        });
+
+        if (!matchedItem || targetSection === lastAnimatedSection) {
+            return;
+        }
+
+        lastAnimatedSection = targetSection;
+        animateIcon(matchedItem.icon, 1000);
     });
 
     ['mousemove', 'scroll', 'keydown', 'touchstart'].forEach(function (eventName) {

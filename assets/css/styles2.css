@@ -42,6 +42,43 @@ body {
     color: #555555;
 }
 
+body.continuous-layout .tab-content {
+    width: 100%;
+}
+
+body.continuous-layout .tab-pane {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+body.continuous-layout .tab-pane.fade {
+    transition: none;
+}
+
+body.continuous-layout .tab-pane + .tab-pane {
+    margin-top: 1.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #dee2e6;
+}
+
+body.continuous-layout .tab-pane h1,
+body.continuous-layout .tab-pane h2 {
+    scroll-margin-top: 120px;
+}
+
+body.continuous-layout .sticky-tab-row {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: rgba(245, 245, 245, 0.96);
+    backdrop-filter: blur(10px);
+    margin-bottom: 0.75rem;
+}
+
+body.continuous-layout #nav-tab-id {
+    padding-top: 0.35rem;
+}
+
 .ai-google-scholar-square, .ai-dblp-square, .ai-researchgate-square, .fa-linkedin, .ai-cv-square {
     font-size: 2rem; /* Adjust this value to make the icons larger */
 }

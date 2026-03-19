@@ -778,6 +778,15 @@ body.continuous-layout #nav-tab-id {
         margin-bottom: 0;
     }
 
+    body.continuous-layout .sticky-tab-row {
+        top: 0.45rem;
+        padding-top: 0.1rem;
+    }
+
+    body.continuous-layout #nav-tab-id {
+        padding-top: 0;
+    }
+
     /* Adjust profile picture size on mobile */
     #profile_picture img {
         width: 150px;

@@ -669,6 +669,28 @@ body {
   text-align: right; /* Aligns content to the right on medium and larger screens */
 }
 
+.external-profile-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(0, 123, 255, 0.18);
+  border-radius: 999px;
+  background: #f7fbff;
+  color: #007bff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.external-profile-link:hover,
+.external-profile-link:focus {
+  background: #edf6ff;
+  color: #005ec2;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
 
 /* For the vanishing designation js span headline */
 /* Center content for screens smaller than 971px */

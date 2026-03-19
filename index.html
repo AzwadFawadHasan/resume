@@ -323,6 +323,15 @@
 				// When a nav link is clicked
 				$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 					var target = $(e.target).attr("href"); // Get the target of the tab
+
+					$('.tab-pane').each(function () {
+						if ('#' + this.id === target) {
+							this.classList.add('active', 'show');
+						} else {
+							this.classList.remove('active', 'show');
+						}
+					});
+
 					window.history.pushState(null, null, target); // Change the URL without reloading the page
 				});
 
@@ -470,7 +479,7 @@
 		<div class="row">
 			<div class="tab-content">
 				<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-				<div class="tab-pane container active" id="bio">
+				<div class="tab-pane container fade show active" id="bio">
 					<!-- <h5><b>Short bio</b></h5> -->
 					<p class="text-justify">
 						<span id="add-step-animation"> I’m Azwad, currently working as a full-stack dev at MSSL and as a

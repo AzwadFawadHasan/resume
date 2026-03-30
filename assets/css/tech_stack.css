@@ -31,8 +31,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100vh;
-        width: 100vw;
+        min-height: unset;
+        width: 100%;
+        padding: 0.5rem 0;
         background-color: rgb(var(--tagcloud-bg-color-rgb)) !important;
         overflow: hidden;
     }
@@ -47,8 +48,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100vh;
-        width: 100vw;
+        min-height: unset;
+        width: 100%;
+        padding: 0.35rem 0;
         background-color: rgb(var(--tagcloud-bg-color-rgb)) !important;
         overflow: hidden;
     }
@@ -67,7 +69,7 @@ vars
 --tagcloud-animation-play-state: running;
 --tagcloud-diameter: 32rem;
 --tagcloud-start-rotation: 54;
---tagcloud-controls-diameter: 256rem;
+--tagcloud-controls-diameter: 32rem;
 --tagcloud-control-bg-color: transparent;
 --tagcloud-control-bg-hover-color: transparent;
 --tagcloud-control-bg-checked-color: transparent;
@@ -122,7 +124,9 @@ outline: none;
 display: flex;
 align-items: center;
 justify-content: center;
-height: 100vh;
+min-height: unset;
+width: 100%;
+padding: 1rem 0;
 background-color: rgb(var(--tagcloud-bg-color-rgb)) !important;
 overflow: hidden;
 }
@@ -135,8 +139,9 @@ tagcloud
 --_control-radius: calc(var(--_control-diamater) / 2);
 --_diameter: var(--tagcloud-diameter);
 --_radius: calc(calc(var(--_diameter) / 2) - calc(var(--tag-diameter) / 2));
-width: var(--control-diameter);
-aspect-ratio: 1 / 1;
+width: var(--_diameter);
+height: var(--_diameter);
+position: relative;
 font-family: var(--tag-font-family);
 font-size: var(--tag-font-size);
 }
